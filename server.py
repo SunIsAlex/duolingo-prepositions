@@ -56,6 +56,14 @@ class DuolingoHandler(SimpleHTTPRequestHandler):
         self.send_response(200)
         self.end_headers()
 
+    def do_HEAD(self):
+        if self.path == '/api/progress':
+            self.send_response(200)
+            self.send_header('Content-Type', 'application/json; charset=utf-8')
+            self.end_headers()
+            return
+        super().do_HEAD()
+
     def do_GET(self):
         if self.path == '/api/progress':
             self.send_response(200)
