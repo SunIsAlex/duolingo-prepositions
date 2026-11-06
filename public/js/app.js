@@ -281,6 +281,7 @@ class DuolingoApp {
       input.addEventListener('keydown', (e) => {
         if (e.key === 'Enter' || e.keyCode === 13) {
           e.preventDefault();
+          e.stopPropagation();
           this.handleCheckOrContinue();
         }
       });
@@ -296,6 +297,7 @@ class DuolingoApp {
       if (form) {
         form.onsubmit = (ev) => {
           ev.preventDefault();
+          ev.stopPropagation();
           this.handleCheckOrContinue();
           return false;
         };
@@ -495,6 +497,7 @@ class DuolingoApp {
   }
 
   openFeedbackSheet(isCorrect, q, userInput) {
+    this.feedbackOpenedAt = Date.now();
     const sheet = this.dom.feedbackSheet;
     sheet.className = `feedback-sheet ${isCorrect ? 'correct' : 'wrong'} open`;
 
@@ -840,6 +843,7 @@ class DuolingoApp {
     });
 
     this.dom.feedbackContinueBtn.addEventListener('click', () => {
+      if (Date.now() - (this.feedbackOpenedAt || 0) < 400) return;
       audioManager.playTap();
       this.nextQuestion();
     });
@@ -951,6 +955,8 @@ class DuolingoApp {
       if (isEnter) {
         e.preventDefault();
         if (this.dom.feedbackSheet.classList.contains('open')) {
+          // Require at least 400ms since feedback opened to prevent skipping explanation
+          if (Date.now() - (this.feedbackOpenedAt || 0) < 400) return;
           audioManager.playTap();
           this.nextQuestion();
         } else if (this.dom.summaryModal.classList.contains('open')) {
@@ -964,6 +970,7 @@ class DuolingoApp {
       } else if (isSpace) {
         if (this.dom.feedbackSheet.classList.contains('open')) {
           e.preventDefault();
+          if (Date.now() - (this.feedbackOpenedAt || 0) < 400) return;
           audioManager.playTap();
           this.nextQuestion();
         } else if (this.dom.summaryModal.classList.contains('open')) {
