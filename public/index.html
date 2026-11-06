@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>多邻国介词语法填空 | Duolingo Prepositions</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🦉</text></svg>">
+</head>
+<body>
+  <!-- Header Bar -->
+  <header class="app-header">
+    <div class="header-top">
+      <button class="icon-btn" id="open-custom-modal-btn" title="添加我的专属介词题">➕</button>
+      
+      <!-- Duolingo Progress Bar -->
+      <div class="progress-container">
+        <div class="progress-fill" id="progress-fill">
+          <div class="progress-shine"></div>
+        </div>
+      </div>
+
+      <!-- Stats: Streak & XP & Sound -->
+      <div class="header-stats">
+        <div class="stat-badge streak-badge" title="连续练习天数">
+          <div class="flame-anim-container" id="flame-anim"></div>
+          <span id="streak-count">1</span>
+        </div>
+
+        <div class="stat-badge score-badge" id="open-stats-badge" title="查看学习进度">
+          <span>⚡</span>
+          <span id="xp-count">0</span>
+        </div>
+
+        <button class="icon-btn" id="open-stats-modal-btn" title="查看学习数据与进度">📊</button>
+        <button class="icon-btn" id="sound-toggle-btn" title="开关音效">🔊</button>
+      </div>
+    </div>
+
+    <!-- Category Filters -->
+    <nav class="filter-tabs">
+      <button class="tab-chip active" data-category="all">全部题目</button>
+      <button class="tab-chip" data-category="动词搭配">动词搭配</button>
+      <button class="tab-chip" data-category="形容词搭配">形容词搭配</button>
+      <button class="tab-chip" data-category="介词短语">介词短语</button>
+      <button class="tab-chip" data-category="易混辨析">易混辨析</button>
+      <button class="tab-chip" data-category="mistakes" id="mistake-badge">错题本 (<span id="mistake-count">0</span>)</button>
+    </nav>
+  </header>
+
+  <!-- Main Content -->
+  <main class="main-content">
+    <div class="prompt-title">
+      <span id="prompt-title">填入恰当的介词</span>
+      <span class="category-tag" id="category-tag">动词搭配</span>
+    </div>
+
+    <!-- Duolingo Mascot + Speech Bubble -->
+    <div class="duo-character-section">
+      <div class="duo-mascot-box">
+        <div class="duo-lottie-container" id="duo-mascot-anim"></div>
+      </div>
+
+      <div class="speech-bubble">
+        <div class="bubble-phrase">
+          <button class="speaker-btn" id="speaker-btn" title="朗读句子">🔊</button>
+          <span id="bubble-phrase">dance ______ music</span>
+        </div>
+        <div class="bubble-cn" id="bubble-cn">随着音乐跳舞</div>
+      </div>
+    </div>
+
+    <!-- Cloze Sentence Card -->
+    <form class="cloze-card" id="cloze-form" onsubmit="event.preventDefault(); return false;">
+      <div class="cloze-sentence" id="cloze-sentence">
+        <!-- Injected via JavaScript -->
+      </div>
+      <div class="cloze-translation" id="cloze-translation">
+        <!-- Translation -->
+      </div>
+    </form>
+
+    <!-- Quick Word Bank Tiles -->
+    <div class="word-bank-section">
+      <div class="word-bank-label">常用介词快捷选择（或直接键盘输入）</div>
+      <div class="word-tiles" id="word-tiles">
+        <!-- Rendered dynamically -->
+      </div>
+    </div>
+  </main>
+
+  <!-- Bottom Floating Action Bar -->
+  <footer class="bottom-bar" id="bottom-bar">
+    <div class="bottom-bar-inner">
+      <button type="button" class="skip-btn" id="skip-btn">跳过</button>
+      <button type="button" class="duo-btn duo-btn-green" id="check-btn" disabled>检查 (Enter)</button>
+    </div>
+  </footer>
+
+  <!-- Duolingo Sliding Feedback Sheet -->
+  <aside class="feedback-sheet" id="feedback-sheet">
+    <div class="feedback-inner">
+      <div class="feedback-status-row">
+        <div class="feedback-icon-circle" id="feedback-icon">✓</div>
+        <div class="feedback-headline">
+          <div class="feedback-title" id="feedback-title">太棒了！</div>
+          <div class="feedback-answer-highlight" id="feedback-highlight"></div>
+        </div>
+      </div>
+
+      <!-- Grammatical Explanation Box -->
+      <div class="explanation-card" id="feedback-explanation">
+        <!-- Detailed grammar and collocation tips -->
+      </div>
+
+      <button type="button" class="duo-btn duo-btn-green" id="feedback-continue-btn">继续 (Enter)</button>
+    </div>
+  </aside>
+
+  <!-- Lesson Complete Summary Modal -->
+  <div class="modal-overlay" id="summary-modal">
+    <div class="modal-card">
+      <div class="summary-duo-box" id="summary-duo-anim"></div>
+      <h2 class="summary-title">单元练习完成！</h2>
+      <p class="summary-subtitle">保持节奏，每天进步一点点！</p>
+
+      <div class="summary-stats-grid">
+        <div class="stat-box">
+          <div class="stat-box-num" id="summary-accuracy" style="color: var(--duo-green-dark)">100%</div>
+          <div class="stat-box-label">正确率</div>
+        </div>
+        <div class="stat-box">
+          <div class="stat-box-num" id="summary-xp" style="color: var(--duo-yellow-dark)">+100</div>
+          <div class="stat-box-label">经验值</div>
+        </div>
+        <div class="stat-box">
+          <div class="stat-box-num" id="summary-streak" style="color: var(--duo-orange)">1天</div>
+          <div class="stat-box-label">连续天数</div>
+        </div>
+      </div>
+
+      <button type="button" class="duo-btn duo-btn-green" id="summary-continue-btn">继续下一关</button>
+    </div>
+  </div>
+
+  <!-- Study Progress & Dashboard Modal -->
+  <div class="modal-overlay" id="stats-modal">
+    <div class="modal-card" style="text-align: left; max-width: 520px;">
+      <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 16px;">
+        <h2 style="font-size: 22px; font-weight: 800; color: var(--duo-gray-500); display: flex; align-items: center; gap: 8px;">
+          📊 个人学习进度与成就
+        </h2>
+        <button class="icon-btn" id="close-stats-modal-btn">✕</button>
+      </div>
+
+      <!-- Sync Status Badge -->
+      <div class="sync-status-badge" id="sync-status-badge">
+        <span class="sync-dot"></span>
+        <span id="sync-status-text">已自动同步至本地与服务端</span>
+      </div>
+
+      <!-- Stats Grid -->
+      <div class="progress-stats-grid">
+        <div class="p-stat-card">
+          <div class="p-stat-val" id="stat-total-answered" style="color: var(--duo-blue);">0</div>
+          <div class="p-stat-label">总练习次数</div>
+        </div>
+        <div class="p-stat-card">
+          <div class="p-stat-val" id="stat-accuracy" style="color: var(--duo-green-dark);">100%</div>
+          <div class="p-stat-label">综合正确率</div>
+        </div>
+        <div class="p-stat-card">
+          <div class="p-stat-val" id="stat-mastered-count" style="color: var(--duo-yellow-dark);">0 / 76</div>
+          <div class="p-stat-label">已彻底掌握</div>
+        </div>
+        <div class="p-stat-card">
+          <div class="p-stat-val" id="stat-mistakes-count" style="color: var(--duo-red);">0</div>
+          <div class="p-stat-label">待复习错题</div>
+        </div>
+        <div class="p-stat-card">
+          <div class="p-stat-val" id="stat-streak-val" style="color: var(--duo-orange);">1天</div>
+          <div class="p-stat-label">连续打卡</div>
+        </div>
+        <div class="p-stat-card">
+          <div class="p-stat-val" id="stat-xp-val" style="color: var(--duo-yellow-dark);">0</div>
+          <div class="p-stat-label">累计经验 (XP)</div>
+        </div>
+      </div>
+
+      <!-- Backup and Restore Actions -->
+      <div style="margin-top: 18px; border-top: 2px solid var(--duo-gray-200); padding-top: 16px;">
+        <div style="font-size: 13px; font-weight: 700; color: var(--duo-gray-400); margin-bottom: 10px; text-transform: uppercase;">
+          进度管理与跨设备备份
+        </div>
+        <div style="display: flex; gap: 8px; flex-wrap: wrap;">
+          <button type="button" class="skip-btn" id="export-progress-btn" style="flex: 1; padding: 10px 14px; font-size: 13px;">📥 导出备份</button>
+          <button type="button" class="skip-btn" id="import-progress-btn" style="flex: 1; padding: 10px 14px; font-size: 13px;">📤 导入恢复</button>
+          <input type="file" id="import-progress-file" accept=".json" style="display: none;">
+          <button type="button" class="skip-btn" id="reset-progress-btn" style="padding: 10px 14px; font-size: 13px; color: var(--duo-red);">重置进度</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Custom Question Addition Modal -->
+  <div class="modal-overlay" id="custom-modal">
+    <div class="modal-card" style="text-align: left;">
+      <h2 style="margin-bottom: 16px; font-size: 22px; font-weight: 800; color: var(--duo-gray-500);">➕ 添加我的专属介词题</h2>
+      
+      <div class="input-group">
+        <label class="input-label">介词短语 (例如：dance ___ music)</label>
+        <input type="text" class="text-field" id="custom-phrase" placeholder="例：dance ___ music">
+      </div>
+
+      <div class="input-group">
+        <label class="input-label">完整英文例句 (请用 ___ 代表填空)</label>
+        <input type="text" class="text-field" id="custom-sentence" placeholder="例：They dance ___ the rhythm of the music.">
+      </div>
+
+      <div class="input-group">
+        <label class="input-label">正确介词答案</label>
+        <input type="text" class="text-field" id="custom-answer" placeholder="例：to">
+      </div>
+
+      <div class="input-group">
+        <label class="input-label">中文翻译</label>
+        <input type="text" class="text-field" id="custom-cn" placeholder="例：他们随着音乐的节奏跳舞。">
+      </div>
+
+      <div class="input-group">
+        <label class="input-label">语法解析与记忆技巧 (选填)</label>
+        <textarea class="text-field" id="custom-expl" rows="3" placeholder="填写该搭配的核心逻辑、易错提醒或口诀..."></textarea>
+      </div>
+
+      <div style="display: flex; gap: 10px; margin-top: 18px;">
+        <button type="button" class="skip-btn" id="close-custom-modal-btn" style="flex: 1;">取消</button>
+        <button type="button" class="duo-btn duo-btn-green" id="save-custom-question-btn" style="flex: 2;">保存题目</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Client Libraries -->
+  <script src="libs/lottie.min.js"></script>
+  <script src="libs/confetti.min.js"></script>
+  <script src="js/audio-manager.js"></script>
+  <script src="js/questions.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,17 @@
+{
+  "streak": 5,
+  "xp": 120,
+  "totalAnswered": 10,
+  "totalCorrect": 9,
+  "mistakes": [
+    "c01"
+  ],
+  "history": {
+    "v01": {
+      "attempts": 1,
+      "correct": 1,
+      "mastered": true
+    }
+  },
+  "updatedAt": "2026-11-06T14:31:32.809022+00:00"
+}
