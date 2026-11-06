@@ -1,8 +1,3 @@
 #!/bin/bash
-PID=$(pgrep -f "python3 server.py")
-if [ -n "$PID" ]; then
-    kill -9 $PID
-    echo "🛑 Server (PID $PID) stopped."
-else
-    echo "Server is not running."
-fi
+fuser -k 8080/tcp 2>/dev/null || pkill -f "server\.py" 2>/dev/null || true
+echo "🛑 Server stopped."
