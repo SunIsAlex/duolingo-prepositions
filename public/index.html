@@ -32,6 +32,8 @@
           <span id="xp-count">0</span>
         </div>
 
+        <button class="icon-btn" id="open-zyb-modal-btn" title="作业帮爬虫题库导入">📥</button>
+        <button class="icon-btn" id="open-custom-modal-btn" title="手动添加题目">➕</button>
         <button class="icon-btn" id="open-stats-modal-btn" title="查看学习数据与进度">📊</button>
         <button class="icon-btn" id="sound-toggle-btn" title="开关音效">🔊</button>
       </div>
@@ -40,6 +42,7 @@
     <!-- Category Filters -->
     <nav class="filter-tabs">
       <button class="tab-chip active" data-category="all">全部题目</button>
+      <button class="tab-chip" data-category="作业帮真题">作业帮真题</button>
       <button class="tab-chip" data-category="动词搭配">动词搭配</button>
       <button class="tab-chip" data-category="形容词搭配">形容词搭配</button>
       <button class="tab-chip" data-category="介词短语">介词短语</button>
@@ -235,6 +238,32 @@
       <div style="display: flex; gap: 10px; margin-top: 18px;">
         <button type="button" class="skip-btn" id="close-custom-modal-btn" style="flex: 1;">取消</button>
         <button type="button" class="duo-btn duo-btn-green" id="save-custom-question-btn" style="flex: 2;">保存题目</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Zuoyebang Crawler Modal -->
+  <div class="modal-overlay" id="zyb-modal">
+    <div class="modal-card" style="text-align: left; max-width: 520px;">
+      <h2 style="margin-bottom: 8px; font-size: 22px; font-weight: 800; color: var(--duo-gray-500);">📥 作业帮爬虫题库抓取导入</h2>
+      <p style="font-size: 13px; color: var(--duo-gray-400); margin-bottom: 16px; line-height: 1.4;">
+        利用作业帮爬虫（zyb-crawler）抓取 miniapp 分享链接中的英语真题、语法填空并自动录入多邻国题库。
+      </p>
+      
+      <div class="input-group">
+        <label class="input-label">作业帮分享链接 (支持多行，每行一条)</label>
+        <textarea class="text-field" id="zyb-url-input" rows="3" placeholder="https://activities.zuoyebang.com/miniapp/share/..."></textarea>
+      </div>
+
+      <div style="display: flex; gap: 8px; margin-top: 12px; margin-bottom: 14px;">
+        <button type="button" class="duo-btn duo-btn-blue" id="zyb-crawl-btn" style="flex: 1; padding: 10px 14px; font-size: 14px;">🚀 爬取并导入</button>
+        <button type="button" class="duo-btn duo-btn-green" id="zyb-preload-btn" style="flex: 1; padding: 10px 14px; font-size: 14px;">⚡ 一键载入真题库</button>
+      </div>
+
+      <div id="zyb-crawl-status" style="font-size: 13px; color: var(--duo-gray-400); min-height: 24px; margin-bottom: 12px; line-height: 1.4;"></div>
+
+      <div style="display: flex; gap: 10px; margin-top: 10px;">
+        <button type="button" class="skip-btn" id="close-zyb-modal-btn" style="flex: 1;">关闭</button>
       </div>
     </div>
   </div>

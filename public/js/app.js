@@ -117,7 +117,16 @@ class DuolingoApp {
       customSentenceInput: document.getElementById('custom-sentence'),
       customAnswerInput: document.getElementById('custom-answer'),
       customCnInput: document.getElementById('custom-cn'),
-      customExplInput: document.getElementById('custom-expl')
+      customExplInput: document.getElementById('custom-expl'),
+
+      // Zuoyebang Crawler Modal
+      zybModal: document.getElementById('zyb-modal'),
+      openZybModalBtn: document.getElementById('open-zyb-modal-btn'),
+      closeZybModalBtn: document.getElementById('close-zyb-modal-btn'),
+      zybUrlInput: document.getElementById('zyb-url-input'),
+      zybCrawlBtn: document.getElementById('zyb-crawl-btn'),
+      zybPreloadBtn: document.getElementById('zyb-preload-btn'),
+      zybCrawlStatus: document.getElementById('zyb-crawl-status')
     };
 
     // Update initial UI stats
@@ -942,10 +951,93 @@ class DuolingoApp {
       });
     }
 
+    // Zuoyebang Crawler Modal
+    if (this.dom.openZybModalBtn) {
+      this.dom.openZybModalBtn.addEventListener('click', () => {
+        audioManager.playTap();
+        this.dom.zybModal.classList.add('open');
+      });
+    }
+
+    if (this.dom.closeZybModalBtn) {
+      this.dom.closeZybModalBtn.addEventListener('click', () => {
+        this.dom.zybModal.classList.remove('open');
+      });
+    }
+
+    if (this.dom.zybCrawlBtn) {
+      this.dom.zybCrawlBtn.addEventListener('click', async () => {
+        audioManager.playTap();
+        const text = this.dom.zybUrlInput.value.trim();
+        if (!text) {
+          alert('请先输入至少一条作业帮分享链接！');
+          return;
+        }
+        const lines = text.split('\n').map(l => l.trim()).filter(l => l.length > 0);
+        this.dom.zybCrawlStatus.innerHTML = '<span style="color:var(--duo-blue)">⏳ 正在调用作业帮爬虫抓取解析中，请稍候...</span>';
+        this.dom.zybCrawlBtn.disabled = true;
+
+        try {
+          const resp = await fetch('/api/zyb/crawl', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ urls: lines })
+          });
+          const res = await resp.json();
+          this.dom.zybCrawlBtn.disabled = false;
+
+          if (resp.ok && res.status === 'ok') {
+            audioManager.playComplete();
+            this.dom.zybCrawlStatus.innerHTML = `<span style="color:var(--duo-green-dark)">🎉 ${res.message}</span>`;
+            if (res.questions && res.questions.length > 0) {
+              const existingIds = new Set(this.customQuestions.map(q => q.id));
+              res.questions.forEach(q => {
+                if (!existingIds.has(q.id)) {
+                  this.customQuestions.push(q);
+                  existingIds.add(q.id);
+                }
+              });
+              this.loadQuestions();
+              this.applyCategoryFilter('作业帮真题');
+            }
+          } else {
+            this.dom.zybCrawlStatus.innerHTML = `<span style="color:var(--duo-red-dark)">❌ 抓取失败: ${res.message || res.error || '未知错误'}</span>`;
+          }
+        } catch (err) {
+          this.dom.zybCrawlBtn.disabled = false;
+          this.dom.zybCrawlStatus.innerHTML = `<span style="color:var(--duo-red-dark)">❌ 网络请求异常: ${err.message}</span>`;
+        }
+      });
+    }
+
+    if (this.dom.zybPreloadBtn) {
+      this.dom.zybPreloadBtn.addEventListener('click', async () => {
+        audioManager.playTap();
+        this.dom.zybCrawlStatus.innerHTML = '<span style="color:var(--duo-blue)">⏳ 正在同步精选作业帮真题库...</span>';
+        try {
+          const resp = await fetch('/api/zyb/preload', { method: 'POST' });
+          const res = await resp.json();
+          if (resp.ok && res.status === 'ok') {
+            audioManager.playStreak();
+            this.dom.zybCrawlStatus.innerHTML = `<span style="color:var(--duo-green-dark)">✨ ${res.message}</span>`;
+            this.loadQuestions();
+            this.applyCategoryFilter('作业帮真题');
+          } else {
+            this.dom.zybCrawlStatus.innerHTML = `<span style="color:var(--duo-red-dark)">❌ 同步失败: ${res.error || '未知错误'}</span>`;
+          }
+        } catch (err) {
+          this.dom.zybCrawlStatus.innerHTML = `<span style="color:var(--duo-green-dark)">✨ 离线模式：已自动载入包含的 24 道精选真题</span>`;
+          this.loadQuestions();
+          this.applyCategoryFilter('作业帮真题');
+        }
+      });
+    }
+
     // Keyboard Shortcuts (Enter to Submit & Enter to Continue)
     window.addEventListener('keydown', (e) => {
-      // Do not intercept if user is inside the custom question modal
-      if (this.dom.customModal && this.dom.customModal.classList.contains('open')) {
+      // Do not intercept if user is inside modals
+      if ((this.dom.customModal && this.dom.customModal.classList.contains('open')) ||
+          (this.dom.zybModal && this.dom.zybModal.classList.contains('open'))) {
         return;
       }
 
