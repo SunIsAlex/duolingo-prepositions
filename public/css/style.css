@@ -434,6 +434,97 @@ body {
   box-shadow: 0 3px 0 var(--duo-blue-dark);
 }
 
+/* Cloze 4-Choice Multiple Choice Grid */
+.word-tiles.choice-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+  width: 100%;
+  max-width: 620px;
+  margin: 0 auto;
+}
+
+@media (max-width: 520px) {
+  .word-tiles.choice-grid {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+}
+
+.word-tile.choice-tile {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 12px;
+  font-size: 16px;
+  text-align: left;
+  padding: 12px 18px;
+  width: 100%;
+  min-height: 54px;
+}
+
+.choice-key-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  border-radius: 8px;
+  background: var(--duo-gray-100);
+  border: 1.5px solid var(--duo-gray-200);
+  font-size: 13px;
+  font-weight: 800;
+  color: var(--duo-gray-400);
+  flex-shrink: 0;
+  transition: all 0.15s ease;
+}
+
+.choice-option-text {
+  flex: 1;
+  font-weight: 700;
+  color: var(--duo-gray-500);
+}
+
+.word-tile.choice-tile.selected {
+  background: var(--duo-blue-light);
+  border-color: var(--duo-blue);
+  box-shadow: 0 3px 0 var(--duo-blue-dark);
+}
+
+.word-tile.choice-tile.selected .choice-key-badge {
+  background: var(--duo-blue);
+  border-color: var(--duo-blue-dark);
+  color: #ffffff;
+}
+
+.word-tile.choice-tile.selected .choice-option-text {
+  color: var(--duo-blue);
+}
+
+.cloze-choice-blank {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 100px;
+  height: 36px;
+  margin: 0 6px;
+  padding: 0 12px;
+  border-bottom: 3px solid var(--duo-blue);
+  color: var(--duo-blue);
+  font-size: 20px;
+  font-weight: 800;
+  vertical-align: middle;
+  background: var(--duo-blue-light);
+  border-radius: 8px 8px 0 0;
+  transition: all 0.15s ease;
+}
+
+.cloze-choice-blank.empty {
+  color: var(--duo-gray-300);
+  background: transparent;
+  border-bottom-color: var(--duo-gray-300);
+}
+
 /* Bottom Action Bar */
 .bottom-bar {
   position: fixed;

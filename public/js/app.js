@@ -242,10 +242,21 @@ class DuolingoApp {
 
     // Fill Header & Prompt
     this.dom.categoryTag.textContent = q.category || '语法填空';
-    this.dom.bubblePhrase.textContent = q.phrase.replace('___', '______');
+    const isChoice = (q.type === 'choice' || (q.options && q.options.length > 0));
+    const bankLabel = document.querySelector('.word-bank-label');
+
+    if (isChoice) {
+      this.dom.promptTitle.textContent = '【完形填空】请选择最恰当的选项';
+      if (bankLabel) bankLabel.textContent = '点击选项或按键盘 1 / 2 / 3 / 4 (或 A / B / C / D) 快捷作答';
+    } else {
+      this.dom.promptTitle.textContent = '填入恰当的介词';
+      if (bankLabel) bankLabel.textContent = '常用介词快捷选择（或直接键盘输入）';
+    }
+
+    this.dom.bubblePhrase.textContent = q.phrase ? q.phrase.replace('___', '______') : (q.word || '');
     this.dom.bubbleCn.textContent = q.sentence_cn || '';
 
-    // Render Cloze Sentence with inline input
+    // Render Cloze Sentence with inline input or choice blank
     this.renderClozeSentence(q);
 
     // Render Word Bank Tiles
@@ -260,8 +271,26 @@ class DuolingoApp {
     container.innerHTML = '';
 
     const sentence = q.sentence;
-    // Split by ___ or placeholder
     const parts = sentence.split(/_{2,}/);
+    const isChoice = (q.type === 'choice' || (q.options && q.options.length > 0));
+
+    if (isChoice) {
+      if (parts.length > 1) {
+        container.appendChild(document.createTextNode(parts[0]));
+
+        const blank = document.createElement('span');
+        blank.className = 'cloze-choice-blank empty';
+        blank.id = 'active-cloze-blank';
+        blank.textContent = '______';
+        container.appendChild(blank);
+
+        container.appendChild(document.createTextNode(parts.slice(1).join('___')));
+      } else {
+        container.textContent = sentence;
+      }
+      this.dom.clozeTranslation.textContent = q.sentence_cn || '';
+      return;
+    }
 
     if (parts.length > 1) {
       const partBefore = document.createTextNode(parts[0]);
@@ -325,6 +354,45 @@ class DuolingoApp {
   renderWordTiles(q) {
     const tilesContainer = this.dom.wordTilesContainer;
     tilesContainer.innerHTML = '';
+    const isChoice = (q.type === 'choice' || (q.options && q.options.length > 0));
+
+    if (isChoice) {
+      tilesContainer.className = 'word-tiles choice-grid';
+      const keyLetters = ['A', 'B', 'C', 'D'];
+
+      q.options.forEach((optText, idx) => {
+        const letter = keyLetters[idx] || String.fromCharCode(65 + idx);
+        const keyNum = idx + 1;
+
+        const btn = document.createElement('button');
+        btn.type = 'button';
+        btn.className = 'word-tile choice-tile';
+        btn.dataset.letter = letter;
+        btn.dataset.word = letter.toLowerCase();
+        btn.dataset.optionText = optText;
+
+        const badge = document.createElement('span');
+        badge.className = 'choice-key-badge';
+        badge.textContent = `${keyNum}`;
+
+        const textSpan = document.createElement('span');
+        textSpan.className = 'choice-option-text';
+        textSpan.textContent = optText;
+
+        btn.appendChild(badge);
+        btn.appendChild(textSpan);
+
+        btn.addEventListener('click', () => {
+          audioManager.playTap();
+          this.selectChoiceOption(letter, optText);
+        });
+
+        tilesContainer.appendChild(btn);
+      });
+      return;
+    }
+
+    tilesContainer.className = 'word-tiles';
 
     // Pick candidate prepositions including correct answer and frequent prepositions
     const correctAns = q.answer.toLowerCase();
@@ -352,6 +420,44 @@ class DuolingoApp {
       });
 
       tilesContainer.appendChild(btn);
+    });
+  }
+
+  selectChoiceOption(letter, optText) {
+    if (this.isAnswerChecked) return;
+    const blank = document.getElementById('active-cloze-blank');
+    const wordPart = optText.includes('.') ? optText.split('.').slice(1).join('.').trim() : optText;
+
+    if (this.selectedWord === letter.toLowerCase()) {
+      // Deselect
+      this.selectedWord = '';
+      this.selectedOptionLabel = '';
+      if (blank) {
+        blank.textContent = '______';
+        blank.className = 'cloze-choice-blank empty';
+      }
+      this.highlightSelectedChoice('');
+    } else {
+      // Select
+      this.selectedWord = letter.toLowerCase();
+      this.selectedOptionLabel = optText;
+      if (blank) {
+        blank.textContent = wordPart || optText;
+        blank.className = 'cloze-choice-blank';
+      }
+      this.highlightSelectedChoice(letter);
+    }
+    this.updateCheckButtonState();
+  }
+
+  highlightSelectedChoice(letter) {
+    const tiles = this.dom.wordTilesContainer.querySelectorAll('.word-tile.choice-tile');
+    tiles.forEach(tile => {
+      if (tile.dataset.letter === letter) {
+        tile.classList.add('selected');
+      } else {
+        tile.classList.remove('selected');
+      }
     });
   }
 
@@ -404,8 +510,11 @@ class DuolingoApp {
   }
 
   checkAnswer() {
+    const q = this.currentQuestion;
+    const isChoice = (q && (q.type === 'choice' || (q.options && q.options.length > 0)));
     const inputElem = document.getElementById('active-cloze-input');
-    if (inputElem && inputElem.value) {
+
+    if (!isChoice && inputElem && inputElem.value) {
       this.selectedWord = inputElem.value.trim().toLowerCase();
     }
 
@@ -414,6 +523,12 @@ class DuolingoApp {
         inputElem.classList.add('shake');
         setTimeout(() => inputElem.classList.remove('shake'), 400);
         inputElem.focus();
+      } else {
+        const blank = document.getElementById('active-cloze-blank');
+        if (blank) {
+          blank.classList.add('shake');
+          setTimeout(() => blank.classList.remove('shake'), 400);
+        }
       }
       return;
     }
@@ -421,8 +536,14 @@ class DuolingoApp {
     this.isAnswerChecked = true;
 
     const userInput = this.selectedWord.trim().toLowerCase();
-    const q = this.currentQuestion;
-    const isCorrect = q.acceptable.map(a => a.toLowerCase()).includes(userInput);
+    let isCorrect = false;
+
+    if (isChoice) {
+      const acceptable = (q.acceptable || [q.answer]).map(a => a.toLowerCase());
+      isCorrect = (userInput === q.answer.toLowerCase() || acceptable.includes(userInput));
+    } else {
+      isCorrect = q.acceptable.map(a => a.toLowerCase()).includes(userInput);
+    }
 
     if (inputElem) {
       inputElem.disabled = true;
@@ -509,16 +630,25 @@ class DuolingoApp {
     this.feedbackOpenedAt = Date.now();
     const sheet = this.dom.feedbackSheet;
     sheet.className = `feedback-sheet ${isCorrect ? 'correct' : 'wrong'} open`;
+    const isChoice = (q.type === 'choice' || (q.options && q.options.length > 0));
 
     if (isCorrect) {
       const titles = ['太棒了！', '回答完全正确！', '太赞了！', '非常出色！'];
       this.dom.feedbackTitle.textContent = titles[Math.floor(Math.random() * titles.length)];
       
-      const fullPhrase = q.phrase.replace('___', `<span class="correct-term">${q.answer}</span>`);
-      this.dom.feedbackHighlight.innerHTML = `正确搭配：<b>${fullPhrase}</b>`;
+      if (isChoice) {
+        this.dom.feedbackHighlight.innerHTML = `正确选项：<b>${q.option_answer || q.answer}</b>`;
+      } else {
+        const fullPhrase = q.phrase ? q.phrase.replace('___', `<span class="correct-term">${q.answer}</span>`) : q.answer;
+        this.dom.feedbackHighlight.innerHTML = `正确搭配：<b>${fullPhrase}</b>`;
+      }
     } else {
       this.dom.feedbackTitle.textContent = '正确答案是：';
-      this.dom.feedbackHighlight.innerHTML = `<span class="wrong-term">${q.answer}</span> (你的回答: ${userInput || '未填写'})`;
+      if (isChoice) {
+        this.dom.feedbackHighlight.innerHTML = `<span class="wrong-term">${q.option_answer || q.answer}</span> (你的选择: ${this.selectedOptionLabel || '未选择'})`;
+      } else {
+        this.dom.feedbackHighlight.innerHTML = `<span class="wrong-term">${q.answer}</span> (你的回答: ${userInput || '未填写'})`;
+      }
     }
 
     this.dom.feedbackExplanation.innerHTML = q.explanation || '暂无详细解释。';
@@ -1033,12 +1163,32 @@ class DuolingoApp {
       });
     }
 
-    // Keyboard Shortcuts (Enter to Submit & Enter to Continue)
+    // Keyboard Shortcuts (Enter to Submit & Enter to Continue, 1-4 / A-D for Choices)
     window.addEventListener('keydown', (e) => {
       // Do not intercept if user is inside modals
       if ((this.dom.customModal && this.dom.customModal.classList.contains('open')) ||
           (this.dom.zybModal && this.dom.zybModal.classList.contains('open'))) {
         return;
+      }
+
+      // Shortcut keys 1-4 and A-D for multiple choice cloze questions
+      if (!this.isAnswerChecked && this.currentQuestion && (this.currentQuestion.type === 'choice' || (this.currentQuestion.options && this.currentQuestion.options.length > 0))) {
+        const keyMap = {
+          '1': 'A', 'a': 'A', 'A': 'A',
+          '2': 'B', 'b': 'B', 'B': 'B',
+          '3': 'C', 'c': 'C', 'C': 'C',
+          '4': 'D', 'd': 'D', 'D': 'D'
+        };
+        if (keyMap[e.key]) {
+          e.preventDefault();
+          const targetLetter = keyMap[e.key];
+          const targetTile = this.dom.wordTilesContainer.querySelector(`.word-tile[data-letter="${targetLetter}"]`);
+          if (targetTile) {
+            audioManager.playTap();
+            this.selectChoiceOption(targetLetter, targetTile.dataset.optionText || targetLetter);
+          }
+          return;
+        }
       }
 
       const isEnter = (e.key === 'Enter' || e.keyCode === 13);

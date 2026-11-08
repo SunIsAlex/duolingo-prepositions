@@ -1,4 +1,4 @@
-// 介词填空题库数据 (Preposition Collocations Question Bank)
+// 介词填空与熟词生义完形选择题库数据 (Question Bank)
 const PREPOSITION_QUESTIONS = [
   {
     "id": "v01",
@@ -1271,8 +1271,7 @@ const PREPOSITION_QUESTIONS = [
       "地道表达",
       "高阶词汇"
     ]
-  }
-,
+  },
   {
     "id": "zyb_01",
     "phrase": "kick ___ decades of linguistic argument",
@@ -2368,11 +2367,1249 @@ const PREPOSITION_QUESTIONS = [
       "语法填空",
       "动词搭配"
     ]
+  },
+  {
+    "id": "poly_01",
+    "type": "choice",
+    "word": "click",
+    "phrase": "click (一拍即合；情投意合；恍然大悟)",
+    "sentence": "The two of them met at the freshman party and ___ immediately, becoming lifelong friends.",
+    "sentence_cn": "他们在新生迎新会上相遇，立刻一拍即合，成了终身挚友。",
+    "options": [
+      "A. cleared",
+      "B. faded",
+      "C. clicked",
+      "D. paused"
+    ],
+    "answer": "C",
+    "option_answer": "C. clicked",
+    "acceptable": [
+      "c",
+      "clicked",
+      "c. clicked",
+      "c.clicked"
+    ],
+    "category": "熟词生义",
+    "difficulty": 2,
+    "explanation": "【正确答案】<b>C. clicked</b><br>【熟词生义】<b>click</b>：常见熟义“点击；发出咔哒声” → 本句生义“<b>一拍即合；情投意合；恍然大悟</b>”。<br>【真题来源】全国新高考卷完形精选<br><b>click</b> 在高考完形填空中常考熟词生义，表示“两人一拍即合、情投意合”（become friendly with each other immediately）或“顿悟、豁然开朗”。<br><b>【干扰项辨析】</b>A. cleared（变晴、散开）；B. faded（褪色、衰退）；D. paused（暂停、停顿）。语境强调两人初次见面便情投意合，故选 <b>C</b>。",
+    "tags": [
+      "熟词生义",
+      "完形填空",
+      "名校真题",
+      "全国新高考卷完形精选"
+    ]
+  },
+  {
+    "id": "poly_02",
+    "type": "choice",
+    "word": "book",
+    "phrase": "book (预订（票、座位等）；登记违章)",
+    "sentence": "We had to ___ our flight tickets two months in advance to get the early-bird discount.",
+    "sentence_cn": "我们不得不提前两个月预订机票，以享受早鸟优惠。",
+    "options": [
+      "A. book",
+      "B. print",
+      "C. check",
+      "D. deliver"
+    ],
+    "answer": "A",
+    "option_answer": "A. book",
+    "acceptable": [
+      "a",
+      "book",
+      "a. book",
+      "a.book"
+    ],
+    "category": "熟词生义",
+    "difficulty": 2,
+    "explanation": "【正确答案】<b>A. book</b><br>【熟词生义】<b>book</b>：常见熟义“书本、书籍” → 本句生义“<b>预订（票、座位等）；登记违章</b>”。<br>【真题来源】北京高考真题精选<br><b>book</b> 动词表示“预订（座位、机票等）”（reserve），如 book a room / flight。高考必考核心生义。<br><b>【干扰项辨析】</b>B. print（打印）；C. check（检查）；D. deliver（递送）。句意为提前订票享受优惠，故选 <b>A</b>。",
+    "tags": [
+      "熟词生义",
+      "完形填空",
+      "名校真题",
+      "北京高考真题精选"
+    ]
+  },
+  {
+    "id": "poly_03",
+    "type": "choice",
+    "word": "course",
+    "phrase": "course (（医疗的）疗程；（西餐的）一道菜；航向)",
+    "sentence": "The doctor prescribed a full two-week ___ of antibiotics for the severe infection.",
+    "sentence_cn": "针对严重的感染，医生开出了整整两周的抗生素疗程。",
+    "options": [
+      "A. lesson",
+      "B. course",
+      "C. schedule",
+      "D. system"
+    ],
+    "answer": "B",
+    "option_answer": "B. course",
+    "acceptable": [
+      "b",
+      "course",
+      "b. course",
+      "b.course"
+    ],
+    "category": "熟词生义",
+    "difficulty": 2,
+    "explanation": "【正确答案】<b>B. course</b><br>【熟词生义】<b>course</b>：常见熟义“课程；过程” → 本句生义“<b>（医疗的）疗程；（西餐的）一道菜；航向</b>”。<br>【真题来源】北京海淀高三期中真题<br><b>course</b> 在医疗语境中指“（药的）疗程”（a course of treatment / antibiotics）；在餐饮中指一道菜（a three-course meal）。<br><b>【干扰项辨析】</b>A. lesson（功课、教训）；C. schedule（时间表）；D. system（系统）。固定搭配 a course of antibiotics 指完整疗程，故选 <b>B</b>。",
+    "tags": [
+      "熟词生义",
+      "完形填空",
+      "名校真题",
+      "北京海淀高三期中真题"
+    ]
+  },
+  {
+    "id": "poly_04",
+    "type": "choice",
+    "word": "deliver",
+    "phrase": "deliver (兑现、履行（承诺）；发表演说；接生)",
+    "sentence": "The company promised fast returns, but they completely failed to ___ on their commitments.",
+    "sentence_cn": "该公司曾承诺快速回报，但最终完全未能兑现他们的承诺。",
+    "options": [
+      "A. depend",
+      "B. reflect",
+      "C. deliver",
+      "D. calculate"
+    ],
+    "answer": "C",
+    "option_answer": "C. deliver",
+    "acceptable": [
+      "c",
+      "deliver",
+      "c. deliver",
+      "c.deliver"
+    ],
+    "category": "熟词生义",
+    "difficulty": 2,
+    "explanation": "【正确答案】<b>C. deliver</b><br>【熟词生义】<b>deliver</b>：常见熟义“递送、邮寄” → 本句生义“<b>兑现、履行（承诺）；发表演说；接生</b>”。<br>【真题来源】全国I卷高考真题<br><b>deliver on sth.</b> 表示“履行、兑现（承诺或期望）”（keep a promise / produce results）。<br><b>【干扰项辨析】</b>A. depend on（依靠）；B. reflect on（反思）；D. calculate on（指望）。deliver on commitments 意为兑现承诺，故选 <b>C</b>。",
+    "tags": [
+      "熟词生义",
+      "完形填空",
+      "名校真题",
+      "全国I卷高考真题"
+    ]
+  },
+  {
+    "id": "poly_05",
+    "type": "choice",
+    "word": "consume",
+    "phrase": "consume (（某种强烈情绪）吞噬、充斥、使沉溺)",
+    "sentence": "He was entirely ___ with grief and anger after learning the shocking truth.",
+    "sentence_cn": "得知令人震惊的真相后，他整个人被悲伤与愤怒彻底吞噬。",
+    "options": [
+      "A. covered",
+      "B. consumed",
+      "C. equipped",
+      "D. charged"
+    ],
+    "answer": "B",
+    "option_answer": "B. consumed",
+    "acceptable": [
+      "b",
+      "consumed",
+      "b. consumed",
+      "b.consumed"
+    ],
+    "category": "熟词生义",
+    "difficulty": 2,
+    "explanation": "【正确答案】<b>B. consumed</b><br>【熟词生义】<b>consume</b>：常见熟义“消耗、消费” → 本句生义“<b>（某种强烈情绪）吞噬、充斥、使沉溺</b>”。<br>【真题来源】北京西城高三一模真题<br><b>consume</b> 被动态 <b>be consumed with / by...</b> 指“心中充斥着（悲伤、愤怒、嫉妒等强烈情绪）”，被情绪所吞噬。<br><b>【干扰项辨析】</b>A. covered with（被……覆盖）；C. equipped with（装备有）；D. charged with（被指控）。故选 <b>B</b>。",
+    "tags": [
+      "熟词生义",
+      "完形填空",
+      "名校真题",
+      "北京西城高三一模真题"
+    ]
+  },
+  {
+    "id": "poly_06",
+    "type": "choice",
+    "word": "entertain",
+    "phrase": "entertain (心存、考虑（想法、建议）)",
+    "sentence": "The committee refused to ___ any proposals that involved extra government funding.",
+    "sentence_cn": "委员会拒绝考虑任何涉及额外政府拨款的提议。",
+    "options": [
+      "A. entertain",
+      "B. applaud",
+      "C. celebrate",
+      "D. perform"
+    ],
+    "answer": "A",
+    "option_answer": "A. entertain",
+    "acceptable": [
+      "a",
+      "entertain",
+      "a. entertain",
+      "a.entertain"
+    ],
+    "category": "熟词生义",
+    "difficulty": 2,
+    "explanation": "【正确答案】<b>A. entertain</b><br>【熟词生义】<b>entertain</b>：常见熟义“款待；使娱乐” → 本句生义“<b>心存、考虑（想法、建议）</b>”。<br>【真题来源】全国新高考I卷阅读理解<br><b>entertain an idea / proposal / thought</b> 动词生义表示“心怀、考虑（某种想法或提议）”（consider or contemplate）。<br><b>【干扰项辨析】</b>B. applaud（鼓掌欢迎）；C. celebrate（庆祝）；D. perform（执行、表演）。拒绝考虑该提议，故选 <b>A</b>。",
+    "tags": [
+      "熟词生义",
+      "完形填空",
+      "名校真题",
+      "全国新高考I卷阅读理解"
+    ]
+  },
+  {
+    "id": "poly_07",
+    "type": "choice",
+    "word": "escape",
+    "phrase": "escape (被遗忘；未被某人注意到)",
+    "sentence": "Her face looked vaguely familiar to me, but her name completely ___ my memory.",
+    "sentence_cn": "她的面孔看着有些眼熟，但我怎么也想不起她的名字了（名字完全被我遗忘了）。",
+    "options": [
+      "A. cheated",
+      "B. escaped",
+      "C. dropped",
+      "D. wasted"
+    ],
+    "answer": "B",
+    "option_answer": "B. escaped",
+    "acceptable": [
+      "b",
+      "escaped",
+      "b. escaped",
+      "b.escaped"
+    ],
+    "category": "熟词生义",
+    "difficulty": 2,
+    "explanation": "【正确答案】<b>B. escaped</b><br>【熟词生义】<b>escape</b>：常见熟义“逃跑、逃离” → 本句生义“<b>被遗忘；未被某人注意到</b>”。<br>【真题来源】高考英语全国卷完形精选<br><b>escape sb. / memory</b> 表示“被某人遗忘、未被某人想起来”（fail to be remembered or noticed by someone）。<br><b>【干扰项辨析】</b>A. cheated（欺骗）；C. dropped（掉落）；D. wasted（浪费）。某事逃过记忆即指被遗忘，故选 <b>B</b>。",
+    "tags": [
+      "熟词生义",
+      "完形填空",
+      "名校真题",
+      "高考英语全国卷完形精选"
+    ]
+  },
+  {
+    "id": "poly_08",
+    "type": "choice",
+    "word": "fine",
+    "phrase": "fine (微细的、细微的；纤细精巧的；罚款)",
+    "sentence": "There is a very ___ line between confidence and arrogance in professional leadership.",
+    "sentence_cn": "在职场领导力中，自信与傲慢之间往往只有一线之隔（非常微妙的区别）。",
+    "options": [
+      "A. long",
+      "B. thick",
+      "C. rough",
+      "D. fine"
+    ],
+    "answer": "D",
+    "option_answer": "D. fine",
+    "acceptable": [
+      "d",
+      "fine",
+      "d. fine",
+      "d.fine"
+    ],
+    "category": "熟词生义",
+    "difficulty": 2,
+    "explanation": "【正确答案】<b>D. fine</b><br>【熟词生义】<b>fine</b>：常见熟义“好的；晴朗的” → 本句生义“<b>微细的、细微的；纤细精巧的；罚款</b>”。<br>【真题来源】高考阅读真题<br><b>a fine line / distinction</b> 表示“微细的界限 / 细微的差别”；名词表示“罚款”。<br><b>【干扰项辨析】</b>A. long（漫长的）；B. thick（粗厚的）；C. rough（粗糙的）。a fine line 是英语经典比喻，指微妙的界限，故选 <b>D</b>。",
+    "tags": [
+      "熟词生义",
+      "完形填空",
+      "名校真题",
+      "高考阅读真题"
+    ]
+  },
+  {
+    "id": "poly_09",
+    "type": "choice",
+    "word": "hit",
+    "phrase": "hit (突然意识到/想到；风靡一时的人或物)",
+    "sentence": "Sitting on the bench lost in thoughts, it suddenly ___ me that the roses had been pruned.",
+    "sentence_cn": "坐在长凳上沉思时，我突然意识到那些玫瑰花已经被修剪过了。",
+    "options": [
+      "A. beat",
+      "B. attracted",
+      "C. hit",
+      "D. flooded"
+    ],
+    "answer": "C",
+    "option_answer": "C. hit",
+    "acceptable": [
+      "c",
+      "hit",
+      "c. hit",
+      "c.hit"
+    ],
+    "category": "熟词生义",
+    "difficulty": 2,
+    "explanation": "【正确答案】<b>C. hit</b><br>【熟词生义】<b>hit</b>：常见熟义“击打、打中” → 本句生义“<b>突然意识到/想到；风靡一时的人或物</b>”。<br>【真题来源】2026北京人大附中高三10月月考真题 Q8<br><b>It hits sb. that...</b> 固定句型，表示“某人突然意识到/想到……”（it suddenly occurred to me that...）。<br><b>【干扰项辨析】</b>A. beat（敲打、跳动）；B. attracted（吸引）；D. flooded（淹没）。人大附中原题考查 hit 熟词生义，表示内心猛然领悟，故选 <b>C</b>。",
+    "tags": [
+      "熟词生义",
+      "完形填空",
+      "名校真题",
+      "2026北京人大附中高三10月月考真题 Q8"
+    ]
+  },
+  {
+    "id": "poly_10",
+    "type": "choice",
+    "word": "observe",
+    "phrase": "observe (遵守（规则、法律）；庆祝（节日）)",
+    "sentence": "Every citizen is strictly required to ___ the local traffic laws and safety regulations.",
+    "sentence_cn": "每位市民都被严格要求遵守当地的交通法律和安全法规。",
+    "options": [
+      "A. observe",
+      "B. notice",
+      "C. view",
+      "D. watch"
+    ],
+    "answer": "A",
+    "option_answer": "A. observe",
+    "acceptable": [
+      "a",
+      "observe",
+      "a. observe",
+      "a.observe"
+    ],
+    "category": "熟词生义",
+    "difficulty": 2,
+    "explanation": "【正确答案】<b>A. observe</b><br>【熟词生义】<b>observe</b>：常见熟义“观察、监视” → 本句生义“<b>遵守（规则、法律）；庆祝（节日）</b>”。<br>【真题来源】北京高考语法填空精选<br><b>observe</b> 意为“遵守（法律、纪律、传统）”（obey / follow）；亦可表示“庆祝（节日）”（observe the holiday）。<br><b>【干扰项辨析】</b>B. notice（注意到）；C. view（看待、审视）；D. watch（注视）。遵守交规用 observe，故选 <b>A</b>。",
+    "tags": [
+      "熟词生义",
+      "完形填空",
+      "名校真题",
+      "北京高考语法填空精选"
+    ]
+  },
+  {
+    "id": "poly_11",
+    "type": "choice",
+    "word": "promising",
+    "phrase": "promising (大有前途的、大有希望的)",
+    "sentence": "With her outstanding coding skills, she is considered one of the most ___ young engineers.",
+    "sentence_cn": "凭借过硬的编程技术，她被视为最有前途的年轻工程师之一。",
+    "options": [
+      "A. demanding",
+      "B. promising",
+      "C. threatening",
+      "D. exhausting"
+    ],
+    "answer": "B",
+    "option_answer": "B. promising",
+    "acceptable": [
+      "b",
+      "promising",
+      "b. promising",
+      "b.promising"
+    ],
+    "category": "熟词生义",
+    "difficulty": 2,
+    "explanation": "【正确答案】<b>B. promising</b><br>【熟词生义】<b>promising</b>：常见熟义“承诺的、许诺的” → 本句生义“<b>大有前途的、大有希望的</b>”。<br>【真题来源】海淀高三期末模拟精选<br><b>promising</b> 形容词，表示“有前途的、前景光明的”（showing signs of future success），如 a promising young talent。<br><b>【干扰项辨析】</b>A. demanding（要求苛刻的）；C. threatening（威胁性的）；D. exhausting（令人精疲力竭的）。故选 <b>B</b>。",
+    "tags": [
+      "熟词生义",
+      "完形填空",
+      "名校真题",
+      "海淀高三期末模拟精选"
+    ]
+  },
+  {
+    "id": "poly_12",
+    "type": "choice",
+    "word": "touching",
+    "phrase": "touching (令人感动的、动人的；介词：关于)",
+    "sentence": "The movie tells a deeply ___ story about the unconditional love between a mother and son.",
+    "sentence_cn": "这部电影讲述了一个关于母子之间无私挚爱的极为感人的故事。",
+    "options": [
+      "A. shaking",
+      "B. pressing",
+      "C. touching",
+      "D. striking"
+    ],
+    "answer": "C",
+    "option_answer": "C. touching",
+    "acceptable": [
+      "c",
+      "touching",
+      "c. touching",
+      "c.touching"
+    ],
+    "category": "熟词生义",
+    "difficulty": 2,
+    "explanation": "【正确答案】<b>C. touching</b><br>【熟词生义】<b>touching</b>：常见熟义“触摸、碰触” → 本句生义“<b>令人感动的、动人的；介词：关于</b>”。<br>【真题来源】高考阅读真题<br><b>touching</b> 形容词表示“令人感动的、动人的”（moving）；作为介词时意为“关于、至于”（concerning）。<br><b>【干扰项辨析】</b>A. shaking（摇晃的）；B. pressing（紧迫的）；D. striking（引人注目的）。deeply touching 意为深受触动感人，故选 <b>C</b>。",
+    "tags": [
+      "熟词生义",
+      "完形填空",
+      "名校真题",
+      "高考阅读真题"
+    ]
+  },
+  {
+    "id": "poly_13",
+    "type": "choice",
+    "word": "accommodate",
+    "phrase": "accommodate (顺应、使适应；迎合需求)",
+    "sentence": "The flexible curriculum was carefully redesigned to ___ the special needs of diverse students.",
+    "sentence_cn": "这门弹性课程被精心重新设计，以顺应并满足不同学生的特殊需求。",
+    "options": [
+      "A. accommodate",
+      "B. reserve",
+      "C. occupy",
+      "D. maintain"
+    ],
+    "answer": "A",
+    "option_answer": "A. accommodate",
+    "acceptable": [
+      "a",
+      "accommodate",
+      "a. accommodate",
+      "a.accommodate"
+    ],
+    "category": "熟词生义",
+    "difficulty": 2,
+    "explanation": "【正确答案】<b>A. accommodate</b><br>【熟词生义】<b>accommodate</b>：常见熟义“提供住宿、容纳” → 本句生义“<b>顺应、使适应；迎合需求</b>”。<br>【真题来源】高考新课标卷阅读理解<br><b>accommodate needs / requests</b> 意为“顺应、照顾、满足（需求、特殊情况）”，是高考阅读与完形高分词汇。<br><b>【干扰项辨析】</b>B. reserve（预留）；C. occupy（占据）；D. maintain（维持）。满足多元学生需求，故选 <b>A</b>。",
+    "tags": [
+      "熟词生义",
+      "完形填空",
+      "名校真题",
+      "高考新课标卷阅读理解"
+    ]
+  },
+  {
+    "id": "poly_14",
+    "type": "choice",
+    "word": "address",
+    "phrase": "address (设法解决、处理；发表演说；称呼)",
+    "sentence": "Effective measures must be taken immediately to ___ the pressing issue of plastic pollution.",
+    "sentence_cn": "必须立即采取有效措施，以切实解决日益紧迫的塑料污染问题。",
+    "options": [
+      "A. deliver",
+      "B. address",
+      "C. pronounce",
+      "D. sign"
+    ],
+    "answer": "B",
+    "option_answer": "B. address",
+    "acceptable": [
+      "b",
+      "address",
+      "b. address",
+      "b.address"
+    ],
+    "category": "熟词生义",
+    "difficulty": 2,
+    "explanation": "【正确答案】<b>B. address</b><br>【熟词生义】<b>address</b>：常见熟义“地址” → 本句生义“<b>设法解决、处理；发表演说；称呼</b>”。<br>【真题来源】全国高考真题与读后续写经典<br><b>address the issue / problem / challenge</b> 表示“设法应对、解决问题”（tackle or deal with）。高考议论文写作和完形填空顶尖高频词。<br><b>【干扰项辨析】</b>A. deliver（投递）；C. pronounce（宣判、发音）；D. sign（签署）。address the issue 指解决问题，故选 <b>B</b>。",
+    "tags": [
+      "熟词生义",
+      "完形填空",
+      "名校真题",
+      "全国高考真题与读后续写经典"
+    ]
+  },
+  {
+    "id": "poly_15",
+    "type": "choice",
+    "word": "appeal",
+    "phrase": "appeal (吸引力；引起兴趣（接to）；上诉)",
+    "sentence": "Online interactive video games strongly ___ to teenagers because of their vivid graphics.",
+    "sentence_cn": "在线互动视频游戏因其逼真的画面而对青少年具有极强的吸引力。",
+    "options": [
+      "A. apply",
+      "B. appeal",
+      "C. adapt",
+      "D. adjust"
+    ],
+    "answer": "B",
+    "option_answer": "B. appeal",
+    "acceptable": [
+      "b",
+      "appeal",
+      "b. appeal",
+      "b.appeal"
+    ],
+    "category": "熟词生义",
+    "difficulty": 2,
+    "explanation": "【正确答案】<b>B. appeal</b><br>【熟词生义】<b>appeal</b>：常见熟义“呼吁、恳求” → 本句生义“<b>吸引力；引起兴趣（接to）；上诉</b>”。<br>【真题来源】北京高考阅读真题<br><b>appeal to sb.</b> 意为“吸引某人、迎合某人的兴趣”（attract sb.）；名词 <b>appeal</b> 意为“吸引力”。<br><b>【干扰项辨析】</b>A. apply to（适用于）；C. adapt to（适应）；D. adjust to（调节适应）。游戏吸引年轻人用 appeal to，故选 <b>B</b>。",
+    "tags": [
+      "熟词生义",
+      "完形填空",
+      "名校真题",
+      "北京高考阅读真题"
+    ]
+  },
+  {
+    "id": "poly_16",
+    "type": "choice",
+    "word": "appreciate",
+    "phrase": "appreciate (领会、充分理解；赏识；升值)",
+    "sentence": "Living in a foreign country for a year helped him fully ___ the cultural diversity of the world.",
+    "sentence_cn": "在国外生活了一年，帮助他真正深刻理解并领会了世界文化的多样性。",
+    "options": [
+      "A. appreciate",
+      "B. predict",
+      "C. calculate",
+      "D. forgive"
+    ],
+    "answer": "A",
+    "option_answer": "A. appreciate",
+    "acceptable": [
+      "a",
+      "appreciate",
+      "a. appreciate",
+      "a.appreciate"
+    ],
+    "category": "熟词生义",
+    "difficulty": 2,
+    "explanation": "【正确答案】<b>A. appreciate</b><br>【熟词生义】<b>appreciate</b>：常见熟义“感激、感谢” → 本句生义“<b>领会、充分理解；赏识；升值</b>”。<br>【真题来源】全国高考真题精选<br><b>appreciate</b> 熟义为感激，生义指“充分理解、意识到（某事物的价值与意义）”（understand fully），或资产“升值”（increase in value）。<br><b>【干扰项辨析】</b>B. predict（预测）；C. calculate（计算）；D. forgive（原谅）。深刻领会多元文化用 appreciate，故选 <b>A</b>。",
+    "tags": [
+      "熟词生义",
+      "完形填空",
+      "名校真题",
+      "全国高考真题精选"
+    ]
+  },
+  {
+    "id": "poly_17",
+    "type": "choice",
+    "word": "bargain",
+    "phrase": "bargain (预料到；谈判、达成协议)",
+    "sentence": "The sudden heavy rain was much more than they had ___ for during their mountain hike.",
+    "sentence_cn": "这场突如其来的倾盆暴雨远远超出了他们在登山徒步中所预料到的情况。",
+    "options": [
+      "A. bargained",
+      "B. blamed",
+      "C. traded",
+      "D. earned"
+    ],
+    "answer": "A",
+    "option_answer": "A. bargained",
+    "acceptable": [
+      "a",
+      "bargained",
+      "a. bargained",
+      "a.bargained"
+    ],
+    "category": "熟词生义",
+    "difficulty": 2,
+    "explanation": "【正确答案】<b>A. bargained</b><br>【熟词生义】<b>bargain</b>：常见熟义“便宜货、特价商品” → 本句生义“<b>预料到；谈判、达成协议</b>”。<br>【真题来源】高考完形经典陷阱题<br><b>bargain for / on sth.</b> 固定习语，意为“预料到、指望”，常用于否定句或 <b>more than sb. bargained for</b>（出乎意料、招架不住）。<br><b>【干扰项辨析】</b>B. blamed（责怪）；C. traded（交易）；D. earned（赚得）。故选 <b>A</b>。",
+    "tags": [
+      "熟词生义",
+      "完形填空",
+      "名校真题",
+      "高考完形经典陷阱题"
+    ]
+  },
+  {
+    "id": "poly_18",
+    "type": "choice",
+    "word": "bear",
+    "phrase": "bear (具有、带有（特征/相似点）；承担（责任）)",
+    "sentence": "The twin brothers ___ a striking resemblance to their grandfather in their youth.",
+    "sentence_cn": "这对双胞胎兄弟与他们祖父年轻时的样貌有着惊人的相似之处。",
+    "options": [
+      "A. carry",
+      "B. possess",
+      "C. bear",
+      "D. hold"
+    ],
+    "answer": "C",
+    "option_answer": "C. bear",
+    "acceptable": [
+      "c",
+      "bear",
+      "c. bear",
+      "c.bear"
+    ],
+    "category": "熟词生义",
+    "difficulty": 2,
+    "explanation": "【正确答案】<b>C. bear</b><br>【熟词生义】<b>bear</b>：常见熟义“熊；忍受” → 本句生义“<b>具有、带有（特征/相似点）；承担（责任）</b>”。<br>【真题来源】高考完形与阅读真题<br><b>bear a resemblance / relation to</b> 表示“带有……的特征 / 与……有相似之处”；<b>bear responsibility</b> 表示“承担责任”。<br><b>【干扰项辨析】</b>A. carry（携带）；B. possess（拥有）；D. hold（握住）。bear a resemblance 是高考高频地道搭配，故选 <b>C</b>。",
+    "tags": [
+      "熟词生义",
+      "完形填空",
+      "名校真题",
+      "高考完形与阅读真题"
+    ]
+  },
+  {
+    "id": "poly_19",
+    "type": "choice",
+    "word": "bridge",
+    "phrase": "bridge (弥合差距、消除隔阂、缩小分歧)",
+    "sentence": "Cultural exchange programs are dedicated to ___ the generation gap between parents and youths.",
+    "sentence_cn": "文化交流项目致力于弥合父母与青年一代之间的代沟。",
+    "options": [
+      "A. expanding",
+      "B. bridging",
+      "C. widening",
+      "D. damaging"
+    ],
+    "answer": "B",
+    "option_answer": "B. bridging",
+    "acceptable": [
+      "b",
+      "bridging",
+      "b. bridging",
+      "b.bridging"
+    ],
+    "category": "熟词生义",
+    "difficulty": 2,
+    "explanation": "【正确答案】<b>B. bridging</b><br>【熟词生义】<b>bridge</b>：常见熟义“桥梁” → 本句生义“<b>弥合差距、消除隔阂、缩小分歧</b>”。<br>【真题来源】高考写作与模拟题热点<br><b>bridge the gap / divide</b> 动词生义，表示“弥合差距、缩小分歧、消除隔阂”，高阶写作与完形高频动词。<br><b>【干扰项辨析】</b>A. expanding（扩大）；C. widening（加宽）；D. damaging（损害）。消除代沟用 bridge the gap，故选 <b>B</b>。",
+    "tags": [
+      "熟词生义",
+      "完形填空",
+      "名校真题",
+      "高考写作与模拟题热点"
+    ]
+  },
+  {
+    "id": "poly_20",
+    "type": "choice",
+    "word": "check",
+    "phrase": "check (抑制、遏制；阻碍；账单；托运)",
+    "sentence": "The government introduced strict regulations to ___ the rapid rise in housing prices.",
+    "sentence_cn": "政府出台了严厉的调控政策，以有效遏制房价的过快上涨。",
+    "options": [
+      "A. check",
+      "B. track",
+      "C. examine",
+      "D. balance"
+    ],
+    "answer": "A",
+    "option_answer": "A. check",
+    "acceptable": [
+      "a",
+      "check",
+      "a. check",
+      "a.check"
+    ],
+    "category": "熟词生义",
+    "difficulty": 2,
+    "explanation": "【正确答案】<b>A. check</b><br>【熟词生义】<b>check</b>：常见熟义“检查” → 本句生义“<b>抑制、遏制；阻碍；账单；托运</b>”。<br>【真题来源】北京高考真题精选<br><b>check</b> 动词生义指“制止、遏制、阻碍”（stop sth. from increasing or getting worse），名词 <b>keep sth. in check</b> 表示“控制住某事”。<br><b>【干扰项辨析】</b>B. track（追踪）；C. examine（审查）；D. balance（平衡）。遏制上涨用 check，故选 <b>A</b>。",
+    "tags": [
+      "熟词生义",
+      "完形填空",
+      "名校真题",
+      "北京高考真题精选"
+    ]
+  },
+  {
+    "id": "poly_21",
+    "type": "choice",
+    "word": "coach",
+    "phrase": "coach (耐心辅导（功课/面试/技能）)",
+    "sentence": "Her elder sister spent hours ___ her in mathematics before the final college entrance exam.",
+    "sentence_cn": "高考前，她的姐姐花了几个小时耐心辅导她的数学功课。",
+    "options": [
+      "A. testing",
+      "B. directing",
+      "C. coaching",
+      "D. commanding"
+    ],
+    "answer": "C",
+    "option_answer": "C. coaching",
+    "acceptable": [
+      "c",
+      "coaching",
+      "c. coaching",
+      "c.coaching"
+    ],
+    "category": "熟词生义",
+    "difficulty": 2,
+    "explanation": "【正确答案】<b>C. coaching</b><br>【熟词生义】<b>coach</b>：常见熟义“体育教练；大巴车” → 本句生义“<b>耐心辅导（功课/面试/技能）</b>”。<br>【真题来源】全国卷高考真题<br><b>coach sb. in sth.</b> 动词表示“（私下/专门）辅导某人功课或训练某人技能”。<br><b>【干扰项辨析】</b>A. testing（测试）；B. directing（指引）；D. commanding（命令）。辅导功课用 coach in math，故选 <b>C</b>。",
+    "tags": [
+      "熟词生义",
+      "完形填空",
+      "名校真题",
+      "全国卷高考真题"
+    ]
+  },
+  {
+    "id": "poly_22",
+    "type": "choice",
+    "word": "count",
+    "phrase": "count (至关重要、有价值；算数)",
+    "sentence": "In times of real crisis, it is actions, not pretty words, that truly ___.",
+    "sentence_cn": "在真正危机的时刻，真正至关紧要的是切实的行动，而不是动听的言辞。",
+    "options": [
+      "A. mean",
+      "B. count",
+      "C. weigh",
+      "D. figure"
+    ],
+    "answer": "B",
+    "option_answer": "B. count",
+    "acceptable": [
+      "b",
+      "count",
+      "b. count",
+      "b.count"
+    ],
+    "category": "熟词生义",
+    "difficulty": 2,
+    "explanation": "【正确答案】<b>B. count</b><br>【熟词生义】<b>count</b>：常见熟义“数数、计算” → 本句生义“<b>至关重要、有价值；算数</b>”。<br>【真题来源】高考完形核心考点<br><b>Every second counts.</b> / <b>It counts.</b> 这里的 <b>count</b> 为不及物动词，表示“有价值、至关重要”（matter or be important）。<br><b>【干扰项辨析】</b>A. mean（意味着）；C. weigh（称重）；D. figure（计算）。起决定性重要作用用 count，故选 <b>B</b>。",
+    "tags": [
+      "熟词生义",
+      "完形填空",
+      "名校真题",
+      "高考完形核心考点"
+    ]
+  },
+  {
+    "id": "poly_23",
+    "type": "choice",
+    "word": "cross",
+    "phrase": "cross (恼怒的、生气的)",
+    "sentence": "Don't be so ___ with the little boy; he didn't break the vase on purpose.",
+    "sentence_cn": "别对那个小男孩那么发火生气，他并不是故意打破花瓶的。",
+    "options": [
+      "A. cross",
+      "B. broad",
+      "C. sharp",
+      "D. rough"
+    ],
+    "answer": "A",
+    "option_answer": "A. cross",
+    "acceptable": [
+      "a",
+      "cross",
+      "a. cross",
+      "a.cross"
+    ],
+    "category": "熟词生义",
+    "difficulty": 2,
+    "explanation": "【正确答案】<b>A. cross</b><br>【熟词生义】<b>cross</b>：常见熟义“穿过、交叉；十字形” → 本句生义“<b>恼怒的、生气的</b>”。<br>【真题来源】高考阅读真题<br><b>be cross with sb.</b> 形容词表示“恼怒的、生气的”（annoyed or angry with sb.）。<br><b>【干扰项辨析】</b>B. broad（宽广的）；C. sharp（尖锐的）；D. rough（粗糙的）。生某人的气用 cross with sb.，故选 <b>A</b>。",
+    "tags": [
+      "熟词生义",
+      "完形填空",
+      "名校真题",
+      "高考阅读真题"
+    ]
+  },
+  {
+    "id": "poly_24",
+    "type": "choice",
+    "word": "desert",
+    "phrase": "desert (抛弃、遗弃；离弃（岗位）)",
+    "sentence": "A true loyal friend will never ___ you when you are in the depths of adversity.",
+    "sentence_cn": "一个真正忠诚的朋友在你深陷逆境时绝不会离你而去（抛弃你）。",
+    "options": [
+      "A. reject",
+      "B. decline",
+      "C. desert",
+      "D. dismiss"
+    ],
+    "answer": "C",
+    "option_answer": "C. desert",
+    "acceptable": [
+      "c",
+      "desert",
+      "c. desert",
+      "c.desert"
+    ],
+    "category": "熟词生义",
+    "difficulty": 2,
+    "explanation": "【正确答案】<b>C. desert</b><br>【熟词生义】<b>desert</b>：常见熟义“沙漠” → 本句生义“<b>抛弃、遗弃；离弃（岗位）</b>”。<br>【真题来源】高考完形核心词<br><b>desert</b> 动词（读音 /dɪˈzɜːt/）表示“抛弃、遗弃（某人或某地）”（abandon）。<br><b>【干扰项辨析】</b>A. reject（拒绝）；B. decline（婉拒、衰退）；D. dismiss（解散、不屑一顾）。抛弃患难朋友用 desert，故选 <b>C</b>。",
+    "tags": [
+      "熟词生义",
+      "完形填空",
+      "名校真题",
+      "高考完形核心词"
+    ]
+  },
+  {
+    "id": "poly_25",
+    "type": "choice",
+    "word": "develop",
+    "phrase": "develop (患（病）；养成（习惯）；冲洗（照片）)",
+    "sentence": "Without adequate protection under the scorching sun, one may easily ___ severe skin damage.",
+    "sentence_cn": "在烈日下如果没有充足的防晒保护，人很容易患上严重的皮肤损伤。",
+    "options": [
+      "A. develop",
+      "B. invent",
+      "C. produce",
+      "D. expand"
+    ],
+    "answer": "A",
+    "option_answer": "A. develop",
+    "acceptable": [
+      "a",
+      "develop",
+      "a. develop",
+      "a.develop"
+    ],
+    "category": "熟词生义",
+    "difficulty": 2,
+    "explanation": "【正确答案】<b>A. develop</b><br>【熟词生义】<b>develop</b>：常见熟义“发展、开发” → 本句生义“<b>患（病）；养成（习惯）；冲洗（照片）</b>”。<br>【真题来源】高考完形及阅读理解<br><b>develop a habit / an illness / a symptom</b> 分别表示“养成习惯、患病、出现症状”；亦可表示“冲洗胶卷（develop a film）”。<br><b>【干扰项辨析】</b>B. invent（发明）；C. produce（生产）；D. expand（膨胀）。身体形成病症用 develop，故选 <b>A</b>。",
+    "tags": [
+      "熟词生义",
+      "完形填空",
+      "名校真题",
+      "高考完形及阅读理解"
+    ]
+  },
+  {
+    "id": "poly_26",
+    "type": "choice",
+    "word": "dismiss",
+    "phrase": "dismiss (不予考虑、摒弃（想法/警告）)",
+    "sentence": "The manager chose to ___ his junior colleague's warning as mere pessimistic exaggeration.",
+    "sentence_cn": "经理认为年轻同事的警告纯属悲观夸大，对此不予理会（直接摒弃）。",
+    "options": [
+      "A. accept",
+      "B. dismiss",
+      "C. release",
+      "D. transfer"
+    ],
+    "answer": "B",
+    "option_answer": "B. dismiss",
+    "acceptable": [
+      "b",
+      "dismiss",
+      "b. dismiss",
+      "b.dismiss"
+    ],
+    "category": "熟词生义",
+    "difficulty": 2,
+    "explanation": "【正确答案】<b>B. dismiss</b><br>【熟词生义】<b>dismiss</b>：常见熟义“解雇、开除；解散” → 本句生义“<b>不予考虑、摒弃（想法/警告）</b>”。<br>【真题来源】北京高考阅读真题<br><b>dismiss sth. as ...</b> 意为“对……不屑一顾、不予理会、摒除（想法）”（decide that sth. is not important enough to consider）。<br><b>【干扰项辨析】</b>A. accept（接受）；C. release（释放）；D. transfer（转移）。将警告当作夸大不予理睬用 dismiss，故选 <b>B</b>。",
+    "tags": [
+      "熟词生义",
+      "完形填空",
+      "名校真题",
+      "北京高考阅读真题"
+    ]
+  },
+  {
+    "id": "poly_27",
+    "type": "choice",
+    "word": "drive",
+    "phrase": "drive (迫使；驱动力；专项运动/募捐)",
+    "sentence": "Desperate poverty and the lack of basic food can ___ people to commit desperate crimes.",
+    "sentence_cn": "极端的贫困和基础食物的匮乏会迫使人们铤而走险去犯罪。",
+    "options": [
+      "A. lead",
+      "B. drag",
+      "C. guide",
+      "D. drive"
+    ],
+    "answer": "D",
+    "option_answer": "D. drive",
+    "acceptable": [
+      "d",
+      "drive",
+      "d. drive",
+      "d.drive"
+    ],
+    "category": "熟词生义",
+    "difficulty": 2,
+    "explanation": "【正确答案】<b>D. drive</b><br>【熟词生义】<b>drive</b>：常见熟义“驾驶汽车” → 本句生义“<b>迫使；驱动力；专项运动/募捐</b>”。<br>【真题来源】全国高考真题语料<br><b>drive sb. to do sth. / drive sb. crazy</b> 意为“迫使某人做出某事 / 把某人逼疯”；名词 <b>drive</b> 意为“进取心、内驱力”。<br><b>【干扰项辨析】</b>A. lead（引导）；B. drag（拖拽）；C. guide（指引）。迫使某人走投无路犯罪用 drive sb. to do，故选 <b>D</b>。",
+    "tags": [
+      "熟词生义",
+      "完形填空",
+      "名校真题",
+      "全国高考真题语料"
+    ]
+  },
+  {
+    "id": "poly_28",
+    "type": "choice",
+    "word": "figure",
+    "phrase": "figure (认为、认定、心想；计算出)",
+    "sentence": "Since all tickets for the direct train were sold out, I ___ we had better take a bus instead.",
+    "sentence_cn": "既然直达火车的票都卖光了，我认定我们最好改坐大巴。",
+    "options": [
+      "A. figured",
+      "B. calculated",
+      "C. doubted",
+      "D. questioned"
+    ],
+    "answer": "A",
+    "option_answer": "A. figured",
+    "acceptable": [
+      "a",
+      "figured",
+      "a. figured",
+      "a.figured"
+    ],
+    "category": "熟词生义",
+    "difficulty": 2,
+    "explanation": "【正确答案】<b>A. figured</b><br>【熟词生义】<b>figure</b>：常见熟义“数字；体形；知名人物” → 本句生义“<b>认为、认定、心想；计算出</b>”。<br>【真题来源】高考完形与听力真题<br><b>figure that...</b> 口语及叙述中意为“认为、认定、心想”（think / conclude）；<b>figure out</b> 意为“搞明白、计算出”。<br><b>【干扰项辨析】</b>B. calculated（计算、预测）；C. doubted（怀疑）；D. questioned（质问）。认定最好坐大巴用 figured，故选 <b>A</b>。",
+    "tags": [
+      "熟词生义",
+      "完形填空",
+      "名校真题",
+      "高考完形与听力真题"
+    ]
+  },
+  {
+    "id": "poly_29",
+    "type": "choice",
+    "word": "freeze",
+    "phrase": "freeze (惊呆定住、吓得呆住不动；冻结（物价/资产）)",
+    "sentence": "Hearing the sudden clicking sound of a gun behind him, he ___ with terror.",
+    "sentence_cn": "听到身后突然传来子弹上膛的咔哒声，他吓得顿时僵在原地、一动不敢动。",
+    "options": [
+      "A. broke",
+      "B. froze",
+      "C. escaped",
+      "D. fell"
+    ],
+    "answer": "B",
+    "option_answer": "B. froze",
+    "acceptable": [
+      "b",
+      "froze",
+      "b. froze",
+      "b.froze"
+    ],
+    "category": "熟词生义",
+    "difficulty": 2,
+    "explanation": "【正确答案】<b>B. froze</b><br>【熟词生义】<b>freeze</b>：常见熟义“结冰、冷冻” → 本句生义“<b>惊呆定住、吓得呆住不动；冻结（物价/资产）</b>”。<br>【真题来源】高考读后续写生动描写必背词<br><b>freeze</b> 动词过去式为 <b>froze</b>，生义指人因为极度惊吓或警惕而“突然呆住、定格不动”（stop moving because of fear or shock）。续写高分动作动词！<br><b>【干扰项辨析】</b>A. broke（破损）；C. escaped（逃脱）；D. fell（跌倒）。故选 <b>B</b>。",
+    "tags": [
+      "熟词生义",
+      "完形填空",
+      "名校真题",
+      "高考读后续写生动描写必背词"
+    ]
+  },
+  {
+    "id": "poly_30",
+    "type": "choice",
+    "word": "fresh",
+    "phrase": "fresh (精力充沛的；淡水的（如 fresh water）；无经验的)",
+    "sentence": "After taking a thirty-minute power nap, she woke up feeling completely ___ and energetic.",
+    "sentence_cn": "高效小睡了半小时后，她醒来感到浑身精力充沛、神清气爽。",
+    "options": [
+      "A. raw",
+      "B. tough",
+      "C. novel",
+      "D. fresh"
+    ],
+    "answer": "D",
+    "option_answer": "D. fresh",
+    "acceptable": [
+      "d",
+      "fresh",
+      "d. fresh",
+      "d.fresh"
+    ],
+    "category": "熟词生义",
+    "difficulty": 2,
+    "explanation": "【正确答案】<b>D. fresh</b><br>【熟词生义】<b>fresh</b>：常见熟义“新鲜的” → 本句生义“<b>精力充沛的；淡水的（如 fresh water）；无经验的</b>”。<br>【真题来源】高考阅读真题<br><b>feel fresh</b> 意为“感到精神抖擞、恢复精力”；<b>fresh water</b> 意为“淡水”；<b>fresh from school</b> 意为“刚出校门缺乏经验”。<br><b>【干扰项辨析】</b>A. raw（生的、未加工的）；B. tough（坚硬的、棘手的）；C. novel（新奇的）。神清气爽用 fresh，故选 <b>D</b>。",
+    "tags": [
+      "熟词生义",
+      "完形填空",
+      "名校真题",
+      "高考阅读真题"
+    ]
+  },
+  {
+    "id": "poly_31",
+    "type": "choice",
+    "word": "pool",
+    "phrase": "pool (（液体、血液或情感等）聚集、积聚)",
+    "sentence": "The violin gathered dust in the corner, and shame slowly ___ in my belly.",
+    "sentence_cn": "小提琴在角落里积满灰尘，羞愧感在我心头（小腹深处）慢慢积聚。",
+    "options": [
+      "A. cleared",
+      "B. faded",
+      "C. pooled",
+      "D. passed"
+    ],
+    "answer": "C",
+    "option_answer": "C. pooled",
+    "acceptable": [
+      "c",
+      "pooled",
+      "c. pooled",
+      "c.pooled"
+    ],
+    "category": "熟词生义",
+    "difficulty": 2,
+    "explanation": "【正确答案】<b>C. pooled</b><br>【熟词生义】<b>pool</b>：常见熟义“水池、水塘” → 本句生义“<b>（液体、血液或情感等）聚集、积聚</b>”。<br>【真题来源】2026北京朝阳高三期中完形真题 Q6<br><b>pool</b> 作为不及物动词，生义表示“（液体或情绪）汇聚、积聚”（accumulate or gather in a pool）。<br><b>【干扰项辨析】</b>A. cleared（散去）；B. faded（消退）；D. passed（流逝）。朝阳期中全真原题考查 pool 动词生义，表示内心羞愧情绪渐渐聚集，故选 <b>C</b>。",
+    "tags": [
+      "熟词生义",
+      "完形填空",
+      "名校真题",
+      "2026北京朝阳高三期中完形真题 Q6"
+    ]
+  },
+  {
+    "id": "poly_32",
+    "type": "choice",
+    "word": "outlet",
+    "phrase": "outlet (（情感、精力的）发泄途径、宣泄口)",
+    "sentence": "Playing music had once served as my passionate emotional ___, but now it felt like a heavy burden.",
+    "sentence_cn": "演奏音乐曾经是我最炽热的情感发泄途径，但如今却成了一种沉重的负担。",
+    "options": [
+      "A. edge",
+      "B. outlet",
+      "C. excuse",
+      "D. trial"
+    ],
+    "answer": "B",
+    "option_answer": "B. outlet",
+    "acceptable": [
+      "b",
+      "outlet",
+      "b. outlet",
+      "b.outlet"
+    ],
+    "category": "熟词生义",
+    "difficulty": 2,
+    "explanation": "【正确答案】<b>B. outlet</b><br>【熟词生义】<b>outlet</b>：常见熟义“电源插座；折扣店（奥特莱斯）” → 本句生义“<b>（情感、精力的）发泄途径、宣泄口</b>”。<br>【真题来源】2026北京朝阳高三期中完形真题 Q7<br><b>outlet</b> 生义指“（强烈情感或精力的）宣泄途径、发泄口”（a way of expressing or getting rid of strong feelings）。<br><b>【干扰项辨析】</b>A. edge（边缘、优势）；C. excuse（借口）；D. trial（审判、考验）。emotional outlet 是高考完形极高频固定搭配，故选 <b>B</b>。",
+    "tags": [
+      "熟词生义",
+      "完形填空",
+      "名校真题",
+      "2026北京朝阳高三期中完形真题 Q7"
+    ]
+  },
+  {
+    "id": "poly_33",
+    "type": "choice",
+    "word": "tend to",
+    "phrase": "tend to (照料、看顾、伺候（tend to sb./sth.）)",
+    "sentence": "Mr. Jensen was there in the garden as usual, quietly ___ his blossoming rosebushes.",
+    "sentence_cn": "詹森先生和平常一样在花园里，静静地照料着他那些盛开的玫瑰花丛。",
+    "options": [
+      "A. staring at",
+      "B. looking for",
+      "C. tending to",
+      "D. picking up"
+    ],
+    "answer": "C",
+    "option_answer": "C. tending to",
+    "acceptable": [
+      "c",
+      "tending to",
+      "c. tending to",
+      "c.tending to"
+    ],
+    "category": "熟词生义",
+    "difficulty": 2,
+    "explanation": "【正确答案】<b>C. tending to</b><br>【熟词生义】<b>tend to</b>：常见熟义“往往、倾向于（tend to do）” → 本句生义“<b>照料、看顾、伺候（tend to sb./sth.）</b>”。<br>【真题来源】2026北京人大附中高三10月月考真题 Q5<br><b>tend to sb./sth.</b> 动词短语生义表示“照料、照看（植物、病人等）”（care for or look after）。<br><b>【干扰项辨析】</b>A. staring at（凝视）；B. looking for（寻找）；D. picking up（捡起、接送）。照料花草用 tending to，人大附中原题，故选 <b>C</b>。",
+    "tags": [
+      "熟词生义",
+      "完形填空",
+      "名校真题",
+      "2026北京人大附中高三10月月考真题 Q5"
+    ]
+  },
+  {
+    "id": "poly_34",
+    "type": "choice",
+    "word": "betray",
+    "phrase": "betray (（无意中）暴露、流露出（弱点、恐惧、秘密）)",
+    "sentence": "Standing on the podium, I took a deep breath, terrified that my trembling voice would ___ my inner fear.",
+    "sentence_cn": "站在讲台上，我深吸了一口气，唯恐自己颤抖的声音会暴露出我内心的恐惧。",
+    "options": [
+      "A. block",
+      "B. comfort",
+      "C. convince",
+      "D. betray"
+    ],
+    "answer": "D",
+    "option_answer": "D. betray",
+    "acceptable": [
+      "d",
+      "betray",
+      "d. betray",
+      "d.betray"
+    ],
+    "category": "熟词生义",
+    "difficulty": 2,
+    "explanation": "【正确答案】<b>D. betray</b><br>【熟词生义】<b>betray</b>：常见熟义“背叛、出卖” → 本句生义“<b>（无意中）暴露、流露出（弱点、恐惧、秘密）</b>”。<br>【真题来源】2026北京清华附中高三10月月考真题 Q5<br><b>betray</b> 生义表示“无意中流露、显露（弱点、真实感情或身份）”（reveal inadvertently）。<br><b>【干扰项辨析】</b>A. block（阻挡）；B. comfort（安慰）；C. convince（使信服）。清华附中原题考查 feared my weakness would betray me，暴露真实恐惧，故选 <b>D</b>。",
+    "tags": [
+      "熟词生义",
+      "完形填空",
+      "名校真题",
+      "2026北京清华附中高三10月月考真题 Q5"
+    ]
+  },
+  {
+    "id": "poly_35",
+    "type": "choice",
+    "word": "shadow",
+    "phrase": "shadow (跟班学习、见习、密切观察（工作）)",
+    "sentence": "During my summer internship, I was assigned to ___ an experienced senior researcher in the laboratory.",
+    "sentence_cn": "在暑期实习期间，我被安排在实验室跟随一位经验丰富的高级研究员跟班见习。",
+    "options": [
+      "A. shadow",
+      "B. guide",
+      "C. assess",
+      "D. notice"
+    ],
+    "answer": "A",
+    "option_answer": "A. shadow",
+    "acceptable": [
+      "a",
+      "shadow",
+      "a. shadow",
+      "a.shadow"
+    ],
+    "category": "熟词生义",
+    "difficulty": 2,
+    "explanation": "【正确答案】<b>A. shadow</b><br>【熟词生义】<b>shadow</b>：常见熟义“影子、阴影” → 本句生义“<b>跟班学习、见习、密切观察（工作）</b>”。<br>【真题来源】2026北京清华附中高三10月月考真题 Q6<br><b>shadow sb.</b> 在职场与学术语境中表示“跟随某人实地见习观察、跟班学习”（follow and observe sb. closely at work）。<br><b>【干扰项辨析】</b>B. guide（引导）；C. assess（评估）；D. notice（注意）。清华附中原题考查 shadow him in the lab，故选 <b>A</b>。",
+    "tags": [
+      "熟词生义",
+      "完形填空",
+      "名校真题",
+      "2026北京清华附中高三10月月考真题 Q6"
+    ]
+  },
+  {
+    "id": "poly_36",
+    "type": "choice",
+    "word": "wear off",
+    "phrase": "wear off (（感觉、药效等）逐渐消退、渐渐消失)",
+    "sentence": "As I stepped in front of the students and began teaching, my initial anxiety gradually ___.",
+    "sentence_cn": "当我走到学生面前开始讲课时，最初的焦虑紧张感便渐渐消退了。",
+    "options": [
+      "A. kicked in",
+      "B. took over",
+      "C. broke out",
+      "D. wore off"
+    ],
+    "answer": "D",
+    "option_answer": "D. wore off",
+    "acceptable": [
+      "d",
+      "wore off",
+      "d. wore off",
+      "d.wore off"
+    ],
+    "category": "熟词生义",
+    "difficulty": 2,
+    "explanation": "【正确答案】<b>D. wore off</b><br>【熟词生义】<b>wear off</b>：常见熟义“穿坏、磨损（wear out）” → 本句生义“<b>（感觉、药效等）逐渐消退、渐渐消失</b>”。<br>【真题来源】2026北京清华附中高三10月月考真题 Q8<br><b>wear off</b> 指“（疼痛、药物作用、紧张情绪等）逐渐消退、失效”（gradually fade or disappear）。<br><b>【干扰项辨析】</b>A. kicked in（开始起效）；B. took over（接管）；C. broke out（爆发）。清华附中原题考查 anxiety wore off，故选 <b>D</b>。",
+    "tags": [
+      "熟词生义",
+      "完形填空",
+      "名校真题",
+      "2026北京清华附中高三10月月考真题 Q8"
+    ]
+  },
+  {
+    "id": "poly_37",
+    "type": "choice",
+    "word": "feel left out",
+    "phrase": "feel left out (感觉被冷落、受到孤立排挤)",
+    "sentence": "When all her classmates gathered around requesting Mia to sing, Ivy quietly felt ___.",
+    "sentence_cn": "当全班同学都围上前让米娅唱歌时，艾薇静静地感到自己受到了冷落（被边缘化）。",
+    "options": [
+      "A. taken in",
+      "B. picked on",
+      "C. left out",
+      "D. turned down"
+    ],
+    "answer": "C",
+    "option_answer": "C. left out",
+    "acceptable": [
+      "c",
+      "left out",
+      "c. left out",
+      "c.left out"
+    ],
+    "category": "熟词生义",
+    "difficulty": 2,
+    "explanation": "【正确答案】<b>C. left out</b><br>【熟词生义】<b>feel left out</b>：常见熟义“遗漏、略去（leave out）” → 本句生义“<b>感觉被冷落、受到孤立排挤</b>”。<br>【真题来源】2026北京高考真题完形填空 Q2<br><b>feel left out</b> 意为“感到被忽视、受到冷落孤立”（feel excluded or neglected）。<br><b>【干扰项辨析】</b>A. taken in（受骗）；B. picked on（被针对、被找茬）；D. turned down（被拒绝）。北京高考全真原题，故选 <b>C</b>。",
+    "tags": [
+      "熟词生义",
+      "完形填空",
+      "名校真题",
+      "2026北京高考真题完形填空 Q2"
+    ]
+  },
+  {
+    "id": "poly_38",
+    "type": "choice",
+    "word": "force",
+    "phrase": "force (勉强做出、强作（笑容）)",
+    "sentence": "Though she was heartbroken inside, she managed to ___ a smile so as not to worry her parents.",
+    "sentence_cn": "尽管她内心极度伤心，但她还是勉强挤出了一丝微笑，以免让父母担心。",
+    "options": [
+      "A. radiate",
+      "B. force",
+      "C. expect",
+      "D. witness"
+    ],
+    "answer": "B",
+    "option_answer": "B. force",
+    "acceptable": [
+      "b",
+      "force",
+      "b. force",
+      "b.force"
+    ],
+    "category": "熟词生义",
+    "difficulty": 2,
+    "explanation": "【正确答案】<b>B. force</b><br>【熟词生义】<b>force</b>：常见熟义“力量、武力；强迫（force sb. to do）” → 本句生义“<b>勉强做出、强作（笑容）</b>”。<br>【真题来源】2026北京高考真题完形填空 Q4<br><b>force a smile</b> 意为“强作欢颜、勉强挤出一丝微笑”（make an effort to smile when unhappy）。<br><b>【干扰项辨析】</b>A. radiate（散发光芒）；C. expect（期待）；D. witness（见证）。北京高考全真原题考查 forced a smile，故选 <b>B</b>。",
+    "tags": [
+      "熟词生义",
+      "完形填空",
+      "名校真题",
+      "2026北京高考真题完形填空 Q4"
+    ]
+  },
+  {
+    "id": "poly_39",
+    "type": "choice",
+    "word": "distant",
+    "phrase": "distant (冷淡的、疏远的、心不在焉的)",
+    "sentence": "Seeing her sudden change in attitude, he felt hurt because her tone sounded cold and ___.",
+    "sentence_cn": "看到她态度的突然转变，他感到很受伤，因为她的语气听起来冷漠而疏远。",
+    "options": [
+      "A. guilty",
+      "B. shocked",
+      "C. distant",
+      "D. confused"
+    ],
+    "answer": "C",
+    "option_answer": "C. distant",
+    "acceptable": [
+      "c",
+      "distant",
+      "c. distant",
+      "c.distant"
+    ],
+    "category": "熟词生义",
+    "difficulty": 2,
+    "explanation": "【正确答案】<b>C. distant</b><br>【熟词生义】<b>distant</b>：常见熟义“遥远的、远距离的” → 本句生义“<b>冷淡的、疏远的、心不在焉的</b>”。<br>【真题来源】2026北京高考真题完形填空 Q6<br><b>distant</b> 形容人的态度或眼神，表示“冷淡的、疏离的、心不在焉的”（aloof, unfriendly or lost in thought）。<br><b>【干扰项辨析】</b>A. guilty（愧疚的）；B. shocked（震惊的）；D. confused（困惑的）。北京高考全真原题考查 cold and distant，故选 <b>C</b>。",
+    "tags": [
+      "熟词生义",
+      "完形填空",
+      "名校真题",
+      "2026北京高考真题完形填空 Q6"
+    ]
+  },
+  {
+    "id": "poly_40",
+    "type": "choice",
+    "word": "extension",
+    "phrase": "extension (（家庭或团体的）延伸、外延)",
+    "sentence": "To the welcoming villagers, any respectful traveler was embraced as an ___ of their own family.",
+    "sentence_cn": "对于热情好客的村民来说，任何懂礼貌的旅人都被视为他们大家庭的延伸（一份子）。",
+    "options": [
+      "A. advantage",
+      "B. example",
+      "C. honor",
+      "D. extension"
+    ],
+    "answer": "D",
+    "option_answer": "D. extension",
+    "acceptable": [
+      "d",
+      "extension",
+      "d. extension",
+      "d.extension"
+    ],
+    "category": "熟词生义",
+    "difficulty": 2,
+    "explanation": "【正确答案】<b>D. extension</b><br>【熟词生义】<b>extension</b>：常见熟义“延长、延期；电话分机” → 本句生义“<b>（家庭或团体的）延伸、外延</b>”。<br>【真题来源】2026全国I卷高考真题完形填空 Q50<br><b>an extension of sth.</b> 表示“某事物的延伸、外延或延续”（something that develops from or is added to something else）。<br><b>【干扰项辨析】</b>A. advantage（优势）；B. example（典范）；C. honor（荣幸）。全国I卷全真原题考查 an extension of the family，把客人视为家庭的一份子，故选 <b>D</b>。",
+    "tags": [
+      "熟词生义",
+      "完形填空",
+      "名校真题",
+      "2026全国I卷高考真题完形填空 Q50"
+    ]
   }
 ];
 
 if (typeof module !== "undefined" && module.exports) {
   module.exports = { PREPOSITION_QUESTIONS };
 }
-
-

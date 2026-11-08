@@ -128,8 +128,9 @@ def main():
     if not m:
         raise ValueError("Could not find PREPOSITION_QUESTIONS in " + questions_file)
 
-    questions = json.loads(m.group(1))
-    print(f"Loaded {len(questions)} questions.")
+    all_questions = json.loads(m.group(1))
+    questions = [q for q in all_questions if q.get('category') != '熟词生义']
+    print(f"Loaded {len(questions)} preposition questions (out of {len(all_questions)} total).")
 
     # Create document
     doc = Document()
@@ -444,6 +445,21 @@ def main():
     output_filename = "高考英语高频核心介词搭配专项训练与过关测试（1+3项目专训版）.docx"
     doc.save(output_filename)
     print(f"Successfully generated: {output_filename} ({os.path.getsize(output_filename)} bytes)")
+
+    # Copy to sdcard and download locations
+    sdcard_dirs = ["/sdcard", "/sdcard/Download"]
+    import subprocess
+    for sddir in sdcard_dirs:
+        try:
+            dest_file = os.path.join(sddir, output_filename)
+            cmd = f'su -c "cp -f \'{os.path.abspath(output_filename)}\' \'{dest_file}\' && chmod 666 \'{dest_file}\' && chown 10194:1028 \'{dest_file}\' && am broadcast -a android.intent.action.MEDIA_SCANNER_SCAN_FILE -d file://\'{dest_file}\'"'
+            res = subprocess.run(cmd, shell=True, capture_output=True, text=True)
+            if res.returncode == 0:
+                print(f"Successfully synced to: {dest_file}")
+            else:
+                print(f"Warning: Failed to sync to {dest_file}: {res.stderr}")
+        except Exception as e:
+            print(f"Error copying to {sddir}: {e}")
 
 if __name__ == "__main__":
     main()
