@@ -1697,9 +1697,393 @@ const PREPOSITION_QUESTIONS = [
       "七选五",
       "高阶介词"
     ]
+  },
+  {
+    "id": "jsb_01",
+    "phrase": "keep sb ___ track",
+    "sentence": "Scheduling things will help keep you ___ track and overcome the urge to procrastinate.",
+    "sentence_cn": "把任务排进日程有助于让你保持在正轨上，克服拖延的冲动。",
+    "answer": "on",
+    "acceptable": [
+      "on"
+    ],
+    "category": "菁师帮真题",
+    "difficulty": 2,
+    "explanation": "【菁师帮·2026北京朝阳高三期中真题】<b>keep (sb) on track</b> 是高考极其常考的固定搭配，意为“使某人保持正轨、不偏离目标”。反义表达为 <b>off track</b>（偏离正轨）。此外文中出现的 <i>put off</i>（推迟、拖延）也是核心短语。",
+    "tags": [
+      "菁师帮真题",
+      "朝阳期中",
+      "语法填空",
+      "高频搭配"
+    ]
+  },
+  {
+    "id": "jsb_02",
+    "phrase": "push ___ adversity",
+    "sentence": "Despite difficult circumstances, she pushed ___ adversity and graduated with honors.",
+    "sentence_cn": "尽管困难重重，她依然克服逆境坚持完成学业，并以优异成绩毕业。",
+    "answer": "through",
+    "acceptable": [
+      "through"
+    ],
+    "category": "菁师帮真题",
+    "difficulty": 2,
+    "explanation": "【菁师帮·2026北京朝阳高三期中真题】<b>push through ...</b> 意为“坚持挺过、克服（困难/逆境）推进”。这里的介词 <b>through</b> 表达“穿过、经历并挺过困难时期”，如 push through the pain（忍痛坚持到底）。",
+    "tags": [
+      "菁师帮真题",
+      "朝阳期中",
+      "完形填空",
+      "动词短语"
+    ]
+  },
+  {
+    "id": "jsb_03",
+    "phrase": "pool ___ one's heart / belly",
+    "sentence": "The violin gathered dust in the corner, and shame slowly pooled ___ my belly.",
+    "sentence_cn": "小提琴在角落里落满灰尘，而羞愧感也慢慢在我的心底积聚。",
+    "answer": "in",
+    "acceptable": [
+      "in"
+    ],
+    "category": "菁师帮真题",
+    "difficulty": 2,
+    "explanation": "【菁师帮·2026北京朝阳高三期中真题】<b>pool in ...</b> 意为“在……中积聚、汇集”。原卷考查在听力受损无法演奏后，情绪在心底深处慢慢堆积（shame slowly pooled in my belly），是极其生动的文学化地道表达。",
+    "tags": [
+      "菁师帮真题",
+      "朝阳期中",
+      "完形填空",
+      "地道表达"
+    ]
+  },
+  {
+    "id": "jsb_04",
+    "phrase": "shine ___ stage",
+    "sentence": "I'm genuinely happy to watch other young musicians shine ___ stage.",
+    "sentence_cn": "我很欣慰能够看着其他年轻音乐人在舞台上大放异彩。",
+    "answer": "on",
+    "acceptable": [
+      "on"
+    ],
+    "category": "菁师帮真题",
+    "difficulty": 1,
+    "explanation": "【菁师帮·2026北京朝阳高三期中真题】<b>on stage</b> 是固定方位介词短语，意为“在舞台上”。表示在舞台、银幕等平面或展示平台上均使用 <b>on</b>，如 on screen、on the platform。",
+    "tags": [
+      "菁师帮真题",
+      "朝阳期中",
+      "完形填空",
+      "方位介词"
+    ]
+  },
+  {
+    "id": "jsb_05",
+    "phrase": "a reminder ___ what could have been",
+    "sentence": "I've learned to appreciate music as joy, rather than a reminder ___ what could have been.",
+    "sentence_cn": "我学会重新把音乐当作快乐的源泉，而不是用来提醒自己那些原本可能实现的事。",
+    "answer": "of",
+    "acceptable": [
+      "of"
+    ],
+    "category": "菁师帮真题",
+    "difficulty": 2,
+    "explanation": "【菁师帮·2026北京朝阳高三期中真题】<b>a reminder of sth</b> 意为“对……的提醒、让人联想起……的事物”。动词结构为 <b>remind sb of sth</b>（提醒某人某事）。",
+    "tags": [
+      "菁师帮真题",
+      "朝阳期中",
+      "完形填空",
+      "名词介词搭配"
+    ]
+  },
+  {
+    "id": "jsb_06",
+    "phrase": "build dams ___ of mud and branches",
+    "sentence": "Beavers are amazing natural engineers because they build dams ___ of mud and tree branches.",
+    "sentence_cn": "河狸被称为神奇的自然工程师，因为它们用泥土和树枝筑造大坝。",
+    "answer": "out",
+    "acceptable": [
+      "out"
+    ],
+    "category": "菁师帮真题",
+    "difficulty": 1,
+    "explanation": "【菁师帮·2026北京朝阳高三期中真题】<b>build ... out of ...</b> 意为“用……材料制造/筑成……”。介词短语 <b>out of</b> 在此表示来源或制造原料，相当于 made from / using。",
+    "tags": [
+      "菁师帮真题",
+      "朝阳期中",
+      "语法填空",
+      "材料介词"
+    ]
+  },
+  {
+    "id": "jsb_07",
+    "phrase": "serve ___ both a conference center and a park",
+    "sentence": "Today, Yanqi Lake serves ___ both an international conference center and a public leisure destination.",
+    "sentence_cn": "如今，雁栖湖既是国际会议中心，也是大众休闲胜地。",
+    "answer": "as",
+    "acceptable": [
+      "as"
+    ],
+    "category": "菁师帮真题",
+    "difficulty": 1,
+    "explanation": "【菁师帮·2026北京人大附中高三10月真题】<b>serve as ...</b> 是全国卷与北京卷最高频的考点之一，意为“充当、担任、作为……”。这里的介词 <b>as</b> 意为“作为、具有……的功能”，同义搭配有 act as、function as。",
+    "tags": [
+      "菁师帮真题",
+      "人大附中",
+      "语法填空",
+      "高考必考"
+    ]
+  },
+  {
+    "id": "jsb_08",
+    "phrase": "be surrounded ___ rolling mountains",
+    "sentence": "The scenic lake covers 230 hectares and is surrounded ___ rolling mountains on three sides.",
+    "sentence_cn": "这片风景秀丽的湖泊占地230公顷，三面环山。",
+    "answer": "by",
+    "acceptable": [
+      "by",
+      "with"
+    ],
+    "category": "菁师帮真题",
+    "difficulty": 1,
+    "explanation": "【菁师帮·2026北京人大附中高三10月真题】<b>be surrounded by / with ...</b> 意为“被……环绕、包围”。在描述地理风貌时，通常使用介词 <b>by</b> 引导环绕的主体。",
+    "tags": [
+      "菁师帮真题",
+      "人大附中",
+      "语法填空",
+      "被动搭配"
+    ]
+  },
+  {
+    "id": "jsb_09",
+    "phrase": "tend ___ the blossoming roses",
+    "sentence": "Mr. Jensen was there in the garden as usual, quietly tending ___ his blossoming rosebushes.",
+    "sentence_cn": "詹森先生像往常一样在花园里，静静地照料着他盛开的玫瑰花丛。",
+    "answer": "to",
+    "acceptable": [
+      "to"
+    ],
+    "category": "菁师帮真题",
+    "difficulty": 2,
+    "explanation": "【菁师帮·2026北京人大附中高三10月真题】<b>tend to sb/sth</b> 表示“照料、照管、侍弄”。注意：tend 后不接介词接动词原形时（tend to do）表示“倾向于做某事”；后接介词 <b>to + 名词</b> 则表示“照料、关心”（相当于 take care of / look after）。",
+    "tags": [
+      "菁师帮真题",
+      "人大附中",
+      "完形填空",
+      "一词多义"
+    ]
+  },
+  {
+    "id": "jsb_10",
+    "phrase": "be caught up ___ the pressure",
+    "sentence": "As an anxious teenager, I was completely caught up ___ the pressure of school.",
+    "sentence_cn": "作为一个焦虑的青少年，我完全深陷在学业的重压之中。",
+    "answer": "in",
+    "acceptable": [
+      "in"
+    ],
+    "category": "菁师帮真题",
+    "difficulty": 2,
+    "explanation": "【菁师帮·2026北京人大附中高三10月真题】<b>be caught up in sth</b> 意为“被卷入……之中、全神贯注于……以致无法脱身”。介词 <b>in</b> 强调深陷于某种情境或情绪。",
+    "tags": [
+      "菁师帮真题",
+      "人大附中",
+      "完形填空",
+      "情感态度"
+    ]
+  },
+  {
+    "id": "jsb_11",
+    "phrase": "gesture ___ the beautiful roses",
+    "sentence": "He gestured ___ the beautiful roses in his garden, their bright colors shining in the sun.",
+    "sentence_cn": "他用手指向花园里盛开的鲜艳玫瑰，它们在阳光下熠熠生辉。",
+    "answer": "to",
+    "acceptable": [
+      "to",
+      "towards",
+      "toward"
+    ],
+    "category": "菁师帮真题",
+    "difficulty": 2,
+    "explanation": "【菁师帮·2026北京人大附中高三10月真题】<b>gesture to / towards sth/sb</b> 意为“打手势指向……、向……做手势示意”。介词 <b>to / toward</b> 表示动作指向的目标。",
+    "tags": [
+      "菁师帮真题",
+      "人大附中",
+      "完形填空",
+      "动作介词"
+    ]
+  },
+  {
+    "id": "jsb_12",
+    "phrase": "inspired ___ her dedication",
+    "sentence": "Inspired ___ her incredible dedication to greening the desert, he donated US$5,000.",
+    "sentence_cn": "受到她绿化荒漠非凡奉献精神的激励，他捐赠了5000美元。",
+    "answer": "by",
+    "acceptable": [
+      "by"
+    ],
+    "category": "菁师帮真题",
+    "difficulty": 1,
+    "explanation": "【菁师帮·2026北京人大附中高三10月真题】<b>inspired by sb/sth</b> 意为“受到……的启发/鼓舞/激励”。过去分词短语作状语时，由介词 <b>by</b> 引出激励的源泉。",
+    "tags": [
+      "菁师帮真题",
+      "人大附中",
+      "语法填空",
+      "动词搭配"
+    ]
+  },
+  {
+    "id": "jsb_13",
+    "phrase": "regard sleep and diet ___ health advice",
+    "sentence": "For generations, scientists regarded sleep, exercise, and diet ___ three separate aspects of health.",
+    "sentence_cn": "几代人以来，科学家们都将睡眠、运动和饮食视作健康的三大独立方面。",
+    "answer": "as",
+    "acceptable": [
+      "as"
+    ],
+    "category": "菁师帮真题",
+    "difficulty": 1,
+    "explanation": "【菁师帮·2026北京清华附中高三10月真题】<b>regard ... as ...</b> 是英语中最常用的“把……看作/视作……”句型之一。近义搭配包括：<b>see ... as ...</b>、<b>view ... as ...</b>、<b>treat ... as ...</b>、<b>look upon ... as ...</b>。",
+    "tags": [
+      "菁师帮真题",
+      "清华附中",
+      "语法填空",
+      "核心句型"
+    ]
+  },
+  {
+    "id": "jsb_14",
+    "phrase": "the system on ___ both bodies and minds depend",
+    "sentence": "These healthy habits sustain the biological energy system on ___ both our bodies and minds depend.",
+    "sentence_cn": "这些良好的生活习惯维持着我们身心所依赖的生物能量系统。",
+    "answer": "which",
+    "acceptable": [
+      "which"
+    ],
+    "category": "菁师帮真题",
+    "difficulty": 2,
+    "explanation": "【菁师帮·2026北京清华附中高三10月真题】“介词 + 关系代词”引导定语从句经典考题！还原后句子为：both our bodies and minds depend <b>on the ancient energy system</b>。把介词 <b>on</b> 提前至关系代词前，先行词是指物的名词 system，故填 <b>which</b>。",
+    "tags": [
+      "菁师帮真题",
+      "清华附中",
+      "语法填空",
+      "定语从句"
+    ]
+  },
+  {
+    "id": "jsb_15",
+    "phrase": "date back ___ over a thousand years",
+    "sentence": "The legendary story of the Eight Immortals dates back ___ over a thousand years in Chinese folklore.",
+    "sentence_cn": "八仙过海的传奇故事在民间传说中可追溯至一千多年前。",
+    "answer": "to",
+    "acceptable": [
+      "to"
+    ],
+    "category": "菁师帮真题",
+    "difficulty": 1,
+    "explanation": "【菁师帮·2026北京清华附中高三10月真题】<b>date back to ...</b> 或 <b>date from ...</b> 意为“追溯到、始于”。注意：无论句子讲述什么时期的历史，date back to / date from 描述客观属性时均用<b>一般现在时且无被动语态</b>。",
+    "tags": [
+      "菁师帮真题",
+      "清华附中",
+      "语法填空",
+      "高频考点"
+    ]
+  },
+  {
+    "id": "jsb_16",
+    "phrase": "anxiety gradually wears ___",
+    "sentence": "As I stepped in front of the students and began teaching, my initial anxiety gradually wore ___.",
+    "sentence_cn": "当我走上讲台面对学生开始讲课时，我最初的焦虑感逐渐消散了。",
+    "answer": "off",
+    "acceptable": [
+      "off"
+    ],
+    "category": "菁师帮真题",
+    "difficulty": 2,
+    "explanation": "【菁师帮·2026北京清华附中高三10月真题】<b>wear off</b> 是动副短语，意为“（感觉、药效、疼痛、焦虑等）逐渐消退、慢慢消失”。近义短语为 fade away / disappear gradually。<br>【混淆辨析】<b>kick in</b>（开始生效）、<b>take over</b>（接管）、<b>break out</b>（爆发）。",
+    "tags": [
+      "菁师帮真题",
+      "清华附中",
+      "完形填空",
+      "动副短语"
+    ]
+  },
+  {
+    "id": "jsb_17",
+    "phrase": "pave the way ___ future research",
+    "sentence": "His early laboratory training paved the way ___ his successful graduate research.",
+    "sentence_cn": "他早期的实验室科研训练为他日后成功的研究生生涯铺平了道路。",
+    "answer": "for",
+    "acceptable": [
+      "for"
+    ],
+    "category": "菁师帮真题",
+    "difficulty": 2,
+    "explanation": "【菁师帮·2026北京清华附中高三10月真题】<b>pave the way for ...</b> 意为“为……铺平道路、为……创造有利条件”。介词 <b>for</b> 表示目的和受益对象。",
+    "tags": [
+      "菁师帮真题",
+      "清华附中",
+      "完形填空",
+      "常用习语"
+    ]
+  },
+  {
+    "id": "jsb_18",
+    "phrase": "commit oneself ___ embracing new challenges",
+    "sentence": "She has committed herself ___ embracing new challenges instead of staying in her comfort zone.",
+    "sentence_cn": "她下定决心去迎接新的挑战，而不是止步于舒适区。",
+    "answer": "to",
+    "acceptable": [
+      "to"
+    ],
+    "category": "菁师帮真题",
+    "difficulty": 2,
+    "explanation": "【菁师帮·2026北京清华附中高三10月真题】<b>commit oneself to doing sth</b> 意为“致力于……、下定决心做某事”。注意这里的 <b>to 是介词</b>，后面必须接名词或动名词形式（doing），是高考语法填空极爱考的介词陷阱题！",
+    "tags": [
+      "菁师帮真题",
+      "清华附中",
+      "完形填空",
+      "介词to陷阱"
+    ]
+  },
+  {
+    "id": "jsb_19",
+    "phrase": "lead ___ physical exhaustion",
+    "sentence": "Excessive stress and lack of proper rest can lead ___ both physical exhaustion and burnout.",
+    "sentence_cn": "过度的压力与缺乏充足的休息会导致身心俱疲。",
+    "answer": "to",
+    "acceptable": [
+      "to"
+    ],
+    "category": "菁师帮真题",
+    "difficulty": 1,
+    "explanation": "【菁师帮·2026北京海淀高三期中真题】<b>lead to ...</b> 意为“导致、引起、通向”。这里的 <b>to 是介词</b>，后面接名词、代词或动名词。常见同义短语：<b>result in</b>、<b>bring about</b>、<b>contribute to</b>。",
+    "tags": [
+      "菁师帮真题",
+      "海淀期中",
+      "语法填空",
+      "因果搭配"
+    ]
+  },
+  {
+    "id": "jsb_20",
+    "phrase": "turn exercise ___ pure evaluation",
+    "sentence": "Excessive tracking has turned everyday movement ___ something that needs constant evaluation.",
+    "sentence_cn": "过度监测身体数据已将日常运动变成了需要不断被评估的事物。",
+    "answer": "into",
+    "acceptable": [
+      "into"
+    ],
+    "category": "菁师帮真题",
+    "difficulty": 1,
+    "explanation": "【菁师帮·2026北京海淀高三期中真题】<b>turn ... into ...</b> 意为“把……变成……”。介词 <b>into</b> 强调形态、状态或性质的转变，如 translate A into B（将A翻译成B）、transform A into B（将A改造成B）。",
+    "tags": [
+      "菁师帮真题",
+      "海淀期中",
+      "书面表达",
+      "状态转变"
+    ]
   }
 ];
 
 if (typeof module !== "undefined" && module.exports) {
   module.exports = { PREPOSITION_QUESTIONS };
 }
+
