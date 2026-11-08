@@ -2080,10 +2080,299 @@ const PREPOSITION_QUESTIONS = [
       "书面表达",
       "状态转变"
     ]
+  },
+  {
+    "id": "jsb_21",
+    "phrase": "well up ___ / inside sb",
+    "sentence": "When you see her walking towards you, you feel a deep sense of connection well up ___ you.",
+    "sentence_cn": "当你看到她向你走来时，你感到内心深处涌起一股强烈的联结感。",
+    "answer": "within",
+    "acceptable": [
+      "within",
+      "inside"
+    ],
+    "category": "菁师帮真题",
+    "difficulty": 3,
+    "explanation": "【菁师帮·2026北京高考真题第15题】<b>well up within / inside sb</b> 是高考极其惊艳的高阶文学表达，意为“（某种深沉的情感）在内心深处涌起、泛起”。动词 well 原为名词“水井”，在此作不及物动词表示“（泉水/情绪）涌出、喷涌”，后接介词 <b>within</b> 或 <b>inside</b> 表示在心灵/内心深处。",
+    "tags": [
+      "菁师帮真题",
+      "2026北京高考",
+      "语法填空",
+      "高阶介词"
+    ]
+  },
+  {
+    "id": "jsb_22",
+    "phrase": "compare oneself ___ others",
+    "sentence": "She recognised an ache in the heart whenever she compared herself ___ her gifted friend.",
+    "sentence_cn": "每当她拿自己与极具天赋的朋友作比较时，内心深处便会隐隐作痛。",
+    "answer": "with",
+    "acceptable": [
+      "with",
+      "to"
+    ],
+    "category": "菁师帮真题",
+    "difficulty": 2,
+    "explanation": "【菁师帮·2026北京高考真题完形填空】<b>compare A with / to B</b> 意为“将A与B作比较、比照”。而在表示“把A比作B”（修辞上的打比方）时，则固定使用 <b>compare A to B</b>（如 Shakespeare compared the world to a stage）。高考常考两者的细微区别与混用容错。",
+    "tags": [
+      "菁师帮真题",
+      "2026北京高考",
+      "完形填空",
+      "核心搭配"
+    ]
+  },
+  {
+    "id": "jsb_23",
+    "phrase": "stare ___ space",
+    "sentence": "That quiet evening, she sat alone by the window, staring blankly ___ space.",
+    "sentence_cn": "那个宁静的夜晚，她独自坐在窗边，茫然地凝视着虚空发呆。",
+    "answer": "into",
+    "acceptable": [
+      "into"
+    ],
+    "category": "菁师帮真题",
+    "difficulty": 2,
+    "explanation": "【菁师帮·2026北京高考真题完形填空】<b>stare into space</b> 是极其地道的高考完形填空短语，意为“凝视着虚空、双眼放空发呆”。介词 <b>into</b> 传神地表现出目光穿透眼前的空间、陷入深思或神游的状态。",
+    "tags": [
+      "菁师帮真题",
+      "2026北京高考",
+      "完形填空",
+      "地道表达"
+    ]
+  },
+  {
+    "id": "jsb_24",
+    "phrase": "feel left ___",
+    "sentence": "When all her friends gathered around requesting Mia to sing, Ivy quietly felt left ___.",
+    "sentence_cn": "当所有朋友都围在米娅身边请她唱歌时，艾薇感到自己被冷落了。",
+    "answer": "out",
+    "acceptable": [
+      "out"
+    ],
+    "category": "菁师帮真题",
+    "difficulty": 2,
+    "explanation": "【菁师帮·2026北京高考真题完形填空第2题】<b>leave out</b> 意为“省去、遗漏”，其被动形式 <b>feel left out</b> 意为“感到被冷落、被排挤在群体之外”。高考中频繁考查情绪心理状态词，极为核心！",
+    "tags": [
+      "菁师帮真题",
+      "2026北京高考",
+      "完形填空",
+      "动副短语"
+    ]
+  },
+  {
+    "id": "jsb_25",
+    "phrase": "trade surplus items ___ what they needed",
+    "sentence": "Villagers gathered on set days to trade their surplus agricultural produce ___ daily necessities.",
+    "sentence_cn": "村民们在固定的日子聚在一起，用他们多余的农产品换取生活必需品。",
+    "answer": "for",
+    "acceptable": [
+      "for"
+    ],
+    "category": "菁师帮真题",
+    "difficulty": 2,
+    "explanation": "【菁师帮·2026全国I卷高考真题语法填空第61题】<b>trade A for B</b> 意为“用A换取B、以物易物”。介词 <b>for</b> 表示交换的对价与目的，如 trade land for peace（以土地换和平）。【拓展】<b>exchange A for B</b>（用A交换B）。",
+    "tags": [
+      "菁师帮真题",
+      "2026全国I卷",
+      "语法填空",
+      "交换介词"
+    ]
+  },
+  {
+    "id": "jsb_26",
+    "phrase": "date back ___ the Han Dynasty",
+    "sentence": "The open-air market originated from an ancient folk tradition which dates back ___ the Han Dynasty.",
+    "sentence_cn": "这个露天大集源自一种古老的民间传统，可追溯至汉代。",
+    "answer": "to",
+    "acceptable": [
+      "to"
+    ],
+    "category": "菁师帮真题",
+    "difficulty": 1,
+    "explanation": "【菁师帮·2026全国I卷高考真题语法填空第58题】<b>date back to ...</b> 意为“追溯到某朝代/历史时期”。无论句中谈及多古老的事物，该短语作客观属性描述时<b>永远使用一般现在时且无被动语态</b>！同义短语：<b>date from ...</b>。",
+    "tags": [
+      "菁师帮真题",
+      "2026全国I卷",
+      "语法填空",
+      "高频考点"
+    ]
+  },
+  {
+    "id": "jsb_27",
+    "phrase": "in addition ___ buying and selling",
+    "sentence": "In addition ___ being busy venues for trade, these fairs are joyful occasions for socializing.",
+    "sentence_cn": "除了作为繁华的贸易场所外，这些集市也是人们欢聚社交的喜庆场合。",
+    "answer": "to",
+    "acceptable": [
+      "to"
+    ],
+    "category": "菁师帮真题",
+    "difficulty": 1,
+    "explanation": "【菁师帮·2026全国I卷高考真题语法填空段落】<b>in addition to ...</b> 意为“除……之外（还包含其后事物）”，相当于 besides / as well as。注意这里的 <b>to 是介词</b>，后面必须接名词或动名词形式（如 being venues）。",
+    "tags": [
+      "菁师帮真题",
+      "2026全国I卷",
+      "语法填空",
+      "复杂介词短语"
+    ]
+  },
+  {
+    "id": "jsb_28",
+    "phrase": "think of Ohio ___ a whole different world",
+    "sentence": "Though I lived just three hours away, most classmates thought of my hometown ___ a different world.",
+    "sentence_cn": "尽管我只住在三个小时车程之外，但多数同学都把我的家乡视作一个完全不同的世界。",
+    "answer": "as",
+    "acceptable": [
+      "as"
+    ],
+    "category": "菁师帮真题",
+    "difficulty": 1,
+    "explanation": "【菁师帮·2026全国I卷高考真题完形填空】<b>think of A as B</b> 意为“把A看作/视作B”。这里的介词 <b>as</b> 表示身份定位与认定。同义结构：<b>regard A as B</b>、<b>consider A (as) B</b>、<b>look on A as B</b>。",
+    "tags": [
+      "菁师帮真题",
+      "2026全国I卷",
+      "完形填空",
+      "核心句型"
+    ]
+  },
+  {
+    "id": "jsb_29",
+    "phrase": "thankful ___ my small town roots",
+    "sentence": "As I mature through my college years, I am more and more thankful ___ my small-town upbringing.",
+    "sentence_cn": "随着我在大学岁月中逐渐成熟，我对自己在小镇的成长背景愈发心存感激。",
+    "answer": "for",
+    "acceptable": [
+      "for"
+    ],
+    "category": "菁师帮真题",
+    "difficulty": 1,
+    "explanation": "【菁师帮·2026全国I卷高考真题完形填空第45题】<b>be thankful for sth</b> 意为“对某事物心怀感激”。【考点搭配】be thankful to sb for sth（因某事对某人心存感激）。近义短语：<b>be grateful for</b>。",
+    "tags": [
+      "菁师帮真题",
+      "2026全国I卷",
+      "完形填空",
+      "形容词搭配"
+    ]
+  },
+  {
+    "id": "jsb_30",
+    "phrase": "look forward ___ the visits",
+    "sentence": "As the semester comes to an end, I eagerly look forward ___ my upcoming visits home.",
+    "sentence_cn": "随着学期走向尾声，我热切地期待着即将到来的回家探亲。",
+    "answer": "to",
+    "acceptable": [
+      "to"
+    ],
+    "category": "菁师帮真题",
+    "difficulty": 2,
+    "explanation": "【菁师帮·2026全国I卷高考真题完形填空第53题】<b>look forward to sth / doing sth</b> 意为“盼望、期待某事”。注意 <b>to 是介词</b>，后面接名词（visits）或动名词，是全国卷年年必考的超级核心题！",
+    "tags": [
+      "菁师帮真题",
+      "2026全国I卷",
+      "完形填空",
+      "介词to"
+    ]
+  },
+  {
+    "id": "jsb_31",
+    "phrase": "left ___ an unforgettable story",
+    "sentence": "Sarah had originally come to the marketplace for souvenirs, but she left ___ an unforgettable story.",
+    "sentence_cn": "莎拉原本去集市只是想买些纪念品，但她离开时却带走了一个令人难忘的故事。",
+    "answer": "with",
+    "acceptable": [
+      "with"
+    ],
+    "category": "菁师帮真题",
+    "difficulty": 2,
+    "explanation": "【菁师帮·2026北京海淀高三一模第13题】<b>leave with sth</b> 意为“伴随着/带着某物离开”。句子通过 come for（为了……而来）与 left with（伴随/拥有……而离开）形成精妙的对比修辞，是海淀一模语言运用的点睛之笔！",
+    "tags": [
+      "菁师帮真题",
+      "海淀一模",
+      "语法填空",
+      "伴随介词"
+    ]
+  },
+  {
+    "id": "jsb_32",
+    "phrase": "transform yourself ___ a thinker",
+    "sentence": "Through continuous practice, you should strive to transform yourself ___ an open-minded thinker.",
+    "sentence_cn": "通过不断的练习，你应该努力将自己转变成一个思想开明的思考者。",
+    "answer": "into",
+    "acceptable": [
+      "into"
+    ],
+    "category": "菁师帮真题",
+    "difficulty": 1,
+    "explanation": "【菁师帮·2026北京海淀高三一模第20题】<b>transform (sb/sth) into ...</b> 意为“把……彻底转变为……”。介词 <b>into</b> 强调本质、形态或身份的彻底重塑与升华，如 caterpillar transforms into a butterfly。",
+    "tags": [
+      "菁师帮真题",
+      "海淀一模",
+      "语法填空",
+      "动词搭配"
+    ]
+  },
+  {
+    "id": "jsb_33",
+    "phrase": "mindsets in conflict",
+    "sentence": "Critical thinking and open-mindedness might seem to be ___ conflict, but they actually reinforce each other.",
+    "sentence_cn": "批判性思维与开明心态表面看似相互冲突，但它们实际上彼此强化。",
+    "answer": "in",
+    "acceptable": [
+      "in"
+    ],
+    "category": "菁师帮真题",
+    "difficulty": 2,
+    "explanation": "【菁师帮·2026北京海淀高三一模段落】<b>in conflict (with)</b> 意为“处于矛盾冲突中”。介词 <b>in</b> 表示状态，如 in harmony（和谐）、in trouble（困境中）、in dispute（处于争议中）。",
+    "tags": [
+      "菁师帮真题",
+      "海淀一模",
+      "语法填空",
+      "状态介词"
+    ]
+  },
+  {
+    "id": "jsb_34",
+    "phrase": "breaks scheduled ___ periods",
+    "sentence": "The technique divides work into 25-minute blocks, with short breaks scheduled ___ periods.",
+    "sentence_cn": "这项方法将工作划分为25分钟的时间段，并在各时间段之间安排短暂休息。",
+    "answer": "between",
+    "acceptable": [
+      "between"
+    ],
+    "category": "菁师帮真题",
+    "difficulty": 2,
+    "explanation": "【菁师帮·2026北京西城高三一模第15题】<b>between ...</b> 意为“在……（两者或多者之间的一段段间隔）之间”。在时间管理语境中，breaks between periods 特指各个番茄时钟周期之间的工间休息。",
+    "tags": [
+      "菁师帮真题",
+      "西城一模",
+      "语法填空",
+      "时间方位"
+    ]
+  },
+  {
+    "id": "jsb_35",
+    "phrase": "refocus ___ my initial purpose",
+    "sentence": "The professor's calm words marked a turning point where I realized the vital need to refocus ___ my purpose.",
+    "sentence_cn": "教授平静的几句话成为了转折点，让我意识到必须重新聚焦于我最初的目标。",
+    "answer": "on",
+    "acceptable": [
+      "on",
+      "upon"
+    ],
+    "category": "菁师帮真题",
+    "difficulty": 1,
+    "explanation": "【菁师帮·2026北京西城高三一模第12题】<b>refocus on ...</b> 意为“重新聚焦于……、重新集中精力于……”。这里的介词 <b>on</b> 与 focus on、concentrate on 一致，表示注意力集中的目标与焦点。",
+    "tags": [
+      "菁师帮真题",
+      "西城一模",
+      "语法填空",
+      "动词搭配"
+    ]
   }
 ];
 
 if (typeof module !== "undefined" && module.exports) {
   module.exports = { PREPOSITION_QUESTIONS };
 }
+
 
